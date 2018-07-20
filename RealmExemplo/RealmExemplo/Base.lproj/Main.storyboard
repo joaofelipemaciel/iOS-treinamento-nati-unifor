@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RealmExemplo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" hidden="YES" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qfl-5i-HOf">
+                                <rect key="frame" x="16" y="288" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LBe-OS-6WA">
+                                <rect key="frame" x="16" y="334" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" image="campusUnifor" translatesAutoresizingMaskIntoConstraints="NO" id="gZP-q8-YhC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Unifor" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ut-lg-zZS">
+                                <rect key="frame" x="67" y="44" width="240" height="152"/>
+                                <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQJ-HF-IYD">
+                                <rect key="frame" x="16" y="416" width="343" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unifor Online" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNJ-1o-lUU">
+                                <rect key="frame" x="16" y="230" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zQJ-HF-IYD" firstAttribute="top" secondItem="LBe-OS-6WA" secondAttribute="bottom" constant="52" id="5VF-IU-liA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gZP-q8-YhC" secondAttribute="trailing" id="9eA-gd-wHN"/>
+                            <constraint firstItem="LBe-OS-6WA" firstAttribute="top" secondItem="Qfl-5i-HOf" secondAttribute="bottom" constant="16" id="C2G-hR-1tu"/>
+                            <constraint firstItem="Qfl-5i-HOf" firstAttribute="top" secondItem="lNJ-1o-lUU" secondAttribute="bottom" constant="37" id="E0a-Yu-lii"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zQJ-HF-IYD" secondAttribute="trailing" constant="16" id="Jrd-Y9-nFy"/>
+                            <constraint firstItem="lNJ-1o-lUU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Kpr-ua-UJ4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qfl-5i-HOf" secondAttribute="trailing" constant="16" id="Lnn-AW-Mo3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lNJ-1o-lUU" secondAttribute="trailing" constant="16" id="OSW-OQ-R64"/>
+                            <constraint firstItem="zQJ-HF-IYD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="QNh-bs-SPt"/>
+                            <constraint firstItem="lNJ-1o-lUU" firstAttribute="centerX" secondItem="8Ut-lg-zZS" secondAttribute="centerX" id="RBt-t1-fpM"/>
+                            <constraint firstItem="gZP-q8-YhC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VVD-i9-1z8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LBe-OS-6WA" secondAttribute="trailing" constant="16" id="WKk-bS-0WS"/>
+                            <constraint firstItem="lNJ-1o-lUU" firstAttribute="top" secondItem="8Ut-lg-zZS" secondAttribute="bottom" constant="34" id="avD-po-qt2"/>
+                            <constraint firstItem="gZP-q8-YhC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oB3-oI-VpK"/>
+                            <constraint firstItem="LBe-OS-6WA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="qHq-Oj-rfG"/>
+                            <constraint firstItem="Qfl-5i-HOf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="qPf-sM-gaD"/>
+                            <constraint firstItem="gZP-q8-YhC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="svG-Sa-zPu"/>
+                            <constraint firstItem="lNJ-1o-lUU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="230" id="zQp-AY-6gU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="Unifor" destination="8Ut-lg-zZS" id="E1J-3q-4cu"/>
+                        <outlet property="entrar" destination="zQJ-HF-IYD" id="Cfa-PT-V6v"/>
+                        <outlet property="imagemFundo" destination="gZP-q8-YhC" id="tEJ-kn-hCG"/>
+                        <outlet property="matricula" destination="Qfl-5i-HOf" id="xdX-z5-Oid"/>
+                        <outlet property="senha" destination="LBe-OS-6WA" id="Ia1-et-Jvz"/>
+                        <outlet property="uniforLabel" destination="lNJ-1o-lUU" id="AfM-rA-9ez"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Unifor" width="386" height="428"/>
+        <image name="campusUnifor" width="1360" height="765"/>
+    </resources>
+</document>

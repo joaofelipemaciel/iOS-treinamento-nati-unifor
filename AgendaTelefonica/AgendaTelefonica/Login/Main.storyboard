@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="AgendaTelefonica" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="agendaTelefonica" translatesAutoresizingMaskIntoConstraints="NO" id="ywU-OA-m3d">
+                                <rect key="frame" x="112.5" y="80" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="ZPp-ZD-IhT"/>
+                                    <constraint firstAttribute="width" constant="150" id="xlx-3h-MOD"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nuE-YQ-cFh">
+                                <rect key="frame" x="16" y="283" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Isf-iU-oWB">
+                                <rect key="frame" x="16" y="363" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQt-hp-cYf">
+                                <rect key="frame" x="16" y="429" width="343" height="30"/>
+                                <state key="normal" title="Entrar"/>
+                                <connections>
+                                    <action selector="logar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xa2-hp-BTg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bb0-PE-IOt">
+                                <rect key="frame" x="16" y="495" width="343" height="30"/>
+                                <state key="normal" title="Cadastrar"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bb0-PE-IOt" firstAttribute="top" secondItem="DQt-hp-cYf" secondAttribute="bottom" constant="36" id="4Qs-ox-uyq"/>
+                            <constraint firstItem="nuE-YQ-cFh" firstAttribute="top" secondItem="ywU-OA-m3d" secondAttribute="bottom" constant="53" id="5Kz-4i-PKz"/>
+                            <constraint firstItem="Isf-iU-oWB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="5p4-Aj-qfZ"/>
+                            <constraint firstItem="DQt-hp-cYf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="6TS-L6-XDh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nuE-YQ-cFh" secondAttribute="trailing" constant="16" id="8PX-1m-Q5M"/>
+                            <constraint firstItem="ywU-OA-m3d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I6U-ed-npp"/>
+                            <constraint firstItem="Isf-iU-oWB" firstAttribute="top" secondItem="nuE-YQ-cFh" secondAttribute="bottom" constant="50" id="Jfb-J7-I3B"/>
+                            <constraint firstItem="nuE-YQ-cFh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L8p-JP-GEX"/>
+                            <constraint firstItem="ywU-OA-m3d" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="M9r-X2-rGL"/>
+                            <constraint firstItem="Isf-iU-oWB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pp0-Gk-y7q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DQt-hp-cYf" secondAttribute="trailing" constant="16" id="VEB-0I-NEY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Isf-iU-oWB" secondAttribute="trailing" constant="16" id="WWG-wh-Z87"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bb0-PE-IOt" secondAttribute="trailing" constant="16" id="Wbw-1z-Ra8"/>
+                            <constraint firstItem="bb0-PE-IOt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZdT-oR-VXi"/>
+                            <constraint firstItem="DQt-hp-cYf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ayB-D3-wWs"/>
+                            <constraint firstItem="bb0-PE-IOt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="cnY-RJ-0ap"/>
+                            <constraint firstItem="nuE-YQ-cFh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="hbf-dD-n9x"/>
+                            <constraint firstItem="DQt-hp-cYf" firstAttribute="top" secondItem="Isf-iU-oWB" secondAttribute="bottom" constant="36" id="wrw-wp-CeP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="agendaTelefonica" destination="ywU-OA-m3d" id="pbC-YX-Hdn"/>
+                        <outlet property="cadastrarButton" destination="bb0-PE-IOt" id="rh4-GP-DKq"/>
+                        <outlet property="email" destination="nuE-YQ-cFh" id="Cfy-Hz-YSs"/>
+                        <outlet property="entrarButton" destination="DQt-hp-cYf" id="jHC-XT-1BM"/>
+                        <outlet property="senha" destination="Isf-iU-oWB" id="ijt-ER-ugW"/>
+                        <segue destination="Hvl-eZ-Ibe" kind="show" identifier="segueEntrar" id="1qw-yO-u7o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Contatos-->
+        <scene sceneID="Gue-0h-IzT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Contatos" id="Hvl-eZ-Ibe" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="edg-uy-AYm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="690" y="30"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="agendaTelefonica" width="512" height="512"/>
+    </resources>
+</document>

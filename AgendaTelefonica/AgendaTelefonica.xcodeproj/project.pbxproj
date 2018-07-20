@@ -1,0 +1,813 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		831B58142100B78200620585 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B58132100B78200620585 /* UserViewModel.swift */; };
+		831B58162100BEA000620585 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 831B58152100BEA000620585 /* Main.storyboard */; };
+		831B58182100BEFF00620585 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 831B58172100BEFF00620585 /* Launch Screen.storyboard */; };
+		831B581A2100C2E800620585 /* SessionControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B58192100C2E800620585 /* SessionControl.swift */; };
+		831B581E2100C48000620585 /* Contatos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 831B581D2100C48000620585 /* Contatos.storyboard */; };
+		831B58202100C4FF00620585 /* ContatosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B581F2100C4FF00620585 /* ContatosViewController.swift */; };
+		831B58272100C6AA00620585 /* Contato.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B58262100C6AA00620585 /* Contato.swift */; };
+		831B58292100CCD200620585 /* ContatosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B58282100CCD200620585 /* ContatosViewModel.swift */; };
+		831B582C2100D01D00620585 /* ContatoRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B582B2100D01D00620585 /* ContatoRequestFactory.swift */; };
+		831B582E2100D03500620585 /* ContatoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B582D2100D03500620585 /* ContatoService.swift */; };
+		8392E24620FF670C00FDB8E5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8392E24520FF670C00FDB8E5 /* Localizable.strings */; };
+		8392E24820FF676400FDB8E5 /* Colors.json in Resources */ = {isa = PBXBuildFile; fileRef = 8392E24720FF676400FDB8E5 /* Colors.json */; };
+		8392E25120FF6EA800FDB8E5 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392E24D20FF6EA700FDB8E5 /* Assets.swift */; };
+		8392E25220FF6EA800FDB8E5 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392E24E20FF6EA800FDB8E5 /* Storyboard.swift */; };
+		8392E25320FF6EA800FDB8E5 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392E24F20FF6EA800FDB8E5 /* Colors.swift */; };
+		8392E25420FF6EA800FDB8E5 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392E25020FF6EA800FDB8E5 /* Localizable.swift */; };
+		8392E25720FF746300FDB8E5 /* LoginRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392E25620FF746300FDB8E5 /* LoginRequestFactory.swift */; };
+		8392E25920FF747F00FDB8E5 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392E25820FF747F00FDB8E5 /* LoginService.swift */; };
+		8392E25C20FF782900FDB8E5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392E25B20FF782900FDB8E5 /* User.swift */; };
+		C3BCE4FE20FE6EC50099B709 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BCE4FD20FE6EC50099B709 /* AppDelegate.swift */; };
+		C3BCE50020FE6EC50099B709 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BCE4FF20FE6EC50099B709 /* LoginViewController.swift */; };
+		C3BCE50520FE6EC50099B709 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3BCE50420FE6EC50099B709 /* Assets.xcassets */; };
+		C3BCE51320FE6EC50099B709 /* AgendaTelefonicaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BCE51220FE6EC50099B709 /* AgendaTelefonicaTests.swift */; };
+		C3BCE51E20FE6EC50099B709 /* AgendaTelefonicaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BCE51D20FE6EC50099B709 /* AgendaTelefonicaUITests.swift */; };
+		E06A4267BFB409AB605C6CEB /* Pods_AgendaTelefonica.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B597981F389274E764BE0143 /* Pods_AgendaTelefonica.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C3BCE50F20FE6EC50099B709 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3BCE4F220FE6EC40099B709 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3BCE4F920FE6EC50099B709;
+			remoteInfo = AgendaTelefonica;
+		};
+		C3BCE51A20FE6EC50099B709 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3BCE4F220FE6EC40099B709 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3BCE4F920FE6EC50099B709;
+			remoteInfo = AgendaTelefonica;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		831B58132100B78200620585 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		831B58152100BEA000620585 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		831B58172100BEFF00620585 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		831B58192100C2E800620585 /* SessionControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionControl.swift; sourceTree = "<group>"; };
+		831B581D2100C48000620585 /* Contatos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Contatos.storyboard; sourceTree = "<group>"; };
+		831B581F2100C4FF00620585 /* ContatosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatosViewController.swift; sourceTree = "<group>"; };
+		831B58262100C6AA00620585 /* Contato.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contato.swift; sourceTree = "<group>"; };
+		831B58282100CCD200620585 /* ContatosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatosViewModel.swift; sourceTree = "<group>"; };
+		831B582B2100D01D00620585 /* ContatoRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoRequestFactory.swift; sourceTree = "<group>"; };
+		831B582D2100D03500620585 /* ContatoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoService.swift; sourceTree = "<group>"; };
+		8392E24520FF670C00FDB8E5 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		8392E24720FF676400FDB8E5 /* Colors.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Colors.json; sourceTree = "<group>"; };
+		8392E24D20FF6EA700FDB8E5 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		8392E24E20FF6EA800FDB8E5 /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		8392E24F20FF6EA800FDB8E5 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		8392E25020FF6EA800FDB8E5 /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		8392E25620FF746300FDB8E5 /* LoginRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestFactory.swift; sourceTree = "<group>"; };
+		8392E25820FF747F00FDB8E5 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		8392E25B20FF782900FDB8E5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A46378D08CCE290E93AF458F /* Pods-AgendaTelefonica.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgendaTelefonica.release.xcconfig"; path = "Pods/Target Support Files/Pods-AgendaTelefonica/Pods-AgendaTelefonica.release.xcconfig"; sourceTree = "<group>"; };
+		B597981F389274E764BE0143 /* Pods_AgendaTelefonica.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AgendaTelefonica.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3BCE4FA20FE6EC50099B709 /* AgendaTelefonica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgendaTelefonica.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3BCE4FD20FE6EC50099B709 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C3BCE4FF20FE6EC50099B709 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C3BCE50420FE6EC50099B709 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C3BCE50920FE6EC50099B709 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3BCE50E20FE6EC50099B709 /* AgendaTelefonicaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgendaTelefonicaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3BCE51220FE6EC50099B709 /* AgendaTelefonicaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaTelefonicaTests.swift; sourceTree = "<group>"; };
+		C3BCE51420FE6EC50099B709 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3BCE51920FE6EC50099B709 /* AgendaTelefonicaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgendaTelefonicaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3BCE51D20FE6EC50099B709 /* AgendaTelefonicaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaTelefonicaUITests.swift; sourceTree = "<group>"; };
+		C3BCE51F20FE6EC50099B709 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6A4D03568760385F2B857FF /* Pods-AgendaTelefonica.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgendaTelefonica.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AgendaTelefonica/Pods-AgendaTelefonica.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C3BCE4F720FE6EC50099B709 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E06A4267BFB409AB605C6CEB /* Pods_AgendaTelefonica.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3BCE50B20FE6EC50099B709 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3BCE51620FE6EC50099B709 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		831B581B2100C44600620585 /* Contatos */ = {
+			isa = PBXGroup;
+			children = (
+				831B58212100C63500620585 /* Model */,
+				831B58222100C64600620585 /* ViewModel */,
+				831B58242100C66300620585 /* Controllers */,
+				831B58232100C65600620585 /* Service */,
+				831B581D2100C48000620585 /* Contatos.storyboard */,
+			);
+			path = Contatos;
+			sourceTree = "<group>";
+		};
+		831B58212100C63500620585 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				831B58262100C6AA00620585 /* Contato.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		831B58222100C64600620585 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				831B58282100CCD200620585 /* ContatosViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		831B58232100C65600620585 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				831B582B2100D01D00620585 /* ContatoRequestFactory.swift */,
+				831B582D2100D03500620585 /* ContatoService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		831B58242100C66300620585 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				831B581F2100C4FF00620585 /* ContatosViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8392E23A20FF5F4100FDB8E5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8392E24920FF699800FDB8E5 /* Generated */,
+				8392E24420FF66D100FDB8E5 /* Generators */,
+				C3BCE50420FE6EC50099B709 /* Assets.xcassets */,
+				C3BCE50920FE6EC50099B709 /* Info.plist */,
+				831B58172100BEFF00620585 /* Launch Screen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8392E23B20FF64A200FDB8E5 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				C3BCE4FD20FE6EC50099B709 /* AppDelegate.swift */,
+				831B58192100C2E800620585 /* SessionControl.swift */,
+				8392E23A20FF5F4100FDB8E5 /* Supporting Files */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		8392E23C20FF64DF00FDB8E5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C3BCE4FF20FE6EC50099B709 /* LoginViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8392E24420FF66D100FDB8E5 /* Generators */ = {
+			isa = PBXGroup;
+			children = (
+				8392E24520FF670C00FDB8E5 /* Localizable.strings */,
+				8392E24720FF676400FDB8E5 /* Colors.json */,
+			);
+			path = Generators;
+			sourceTree = "<group>";
+		};
+		8392E24920FF699800FDB8E5 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				8392E24D20FF6EA700FDB8E5 /* Assets.swift */,
+				8392E24F20FF6EA800FDB8E5 /* Colors.swift */,
+				8392E25020FF6EA800FDB8E5 /* Localizable.swift */,
+				8392E24E20FF6EA800FDB8E5 /* Storyboard.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		8392E25520FF743500FDB8E5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				8392E25620FF746300FDB8E5 /* LoginRequestFactory.swift */,
+				8392E25820FF747F00FDB8E5 /* LoginService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		8392E25A20FF781C00FDB8E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8392E25B20FF782900FDB8E5 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8392E25D20FF7BE300FDB8E5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				831B58132100B78200620585 /* UserViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C33F6D1D49A1781EFCA5F1D1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D6A4D03568760385F2B857FF /* Pods-AgendaTelefonica.debug.xcconfig */,
+				A46378D08CCE290E93AF458F /* Pods-AgendaTelefonica.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C3BCE4F120FE6EC40099B709 = {
+			isa = PBXGroup;
+			children = (
+				C3BCE4FC20FE6EC50099B709 /* AgendaTelefonica */,
+				C3BCE51120FE6EC50099B709 /* AgendaTelefonicaTests */,
+				C3BCE51C20FE6EC50099B709 /* AgendaTelefonicaUITests */,
+				C3BCE4FB20FE6EC50099B709 /* Products */,
+				C33F6D1D49A1781EFCA5F1D1 /* Pods */,
+				E6C60E8F1EF63177FBDB759B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C3BCE4FB20FE6EC50099B709 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C3BCE4FA20FE6EC50099B709 /* AgendaTelefonica.app */,
+				C3BCE50E20FE6EC50099B709 /* AgendaTelefonicaTests.xctest */,
+				C3BCE51920FE6EC50099B709 /* AgendaTelefonicaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C3BCE4FC20FE6EC50099B709 /* AgendaTelefonica */ = {
+			isa = PBXGroup;
+			children = (
+				8392E23B20FF64A200FDB8E5 /* Application */,
+				C3BCE52B20FE6F050099B709 /* Login */,
+				831B581B2100C44600620585 /* Contatos */,
+			);
+			path = AgendaTelefonica;
+			sourceTree = "<group>";
+		};
+		C3BCE51120FE6EC50099B709 /* AgendaTelefonicaTests */ = {
+			isa = PBXGroup;
+			children = (
+				C3BCE51220FE6EC50099B709 /* AgendaTelefonicaTests.swift */,
+				C3BCE51420FE6EC50099B709 /* Info.plist */,
+			);
+			path = AgendaTelefonicaTests;
+			sourceTree = "<group>";
+		};
+		C3BCE51C20FE6EC50099B709 /* AgendaTelefonicaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C3BCE51D20FE6EC50099B709 /* AgendaTelefonicaUITests.swift */,
+				C3BCE51F20FE6EC50099B709 /* Info.plist */,
+			);
+			path = AgendaTelefonicaUITests;
+			sourceTree = "<group>";
+		};
+		C3BCE52B20FE6F050099B709 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				831B58152100BEA000620585 /* Main.storyboard */,
+				8392E25A20FF781C00FDB8E5 /* Model */,
+				8392E25D20FF7BE300FDB8E5 /* ViewModel */,
+				8392E25520FF743500FDB8E5 /* Service */,
+				8392E23C20FF64DF00FDB8E5 /* Controllers */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		E6C60E8F1EF63177FBDB759B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B597981F389274E764BE0143 /* Pods_AgendaTelefonica.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C3BCE4F920FE6EC50099B709 /* AgendaTelefonica */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3BCE52220FE6EC50099B709 /* Build configuration list for PBXNativeTarget "AgendaTelefonica" */;
+			buildPhases = (
+				E071A60E9F64369AFC45C241 /* [CP] Check Pods Manifest.lock */,
+				8392E24A20FF69B600FDB8E5 /* ShellScript */,
+				C3BCE4F620FE6EC50099B709 /* Sources */,
+				C3BCE4F720FE6EC50099B709 /* Frameworks */,
+				C3BCE4F820FE6EC50099B709 /* Resources */,
+				494E09F4D959EF14B65979A7 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AgendaTelefonica;
+			productName = AgendaTelefonica;
+			productReference = C3BCE4FA20FE6EC50099B709 /* AgendaTelefonica.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C3BCE50D20FE6EC50099B709 /* AgendaTelefonicaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3BCE52520FE6EC50099B709 /* Build configuration list for PBXNativeTarget "AgendaTelefonicaTests" */;
+			buildPhases = (
+				C3BCE50A20FE6EC50099B709 /* Sources */,
+				C3BCE50B20FE6EC50099B709 /* Frameworks */,
+				C3BCE50C20FE6EC50099B709 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C3BCE51020FE6EC50099B709 /* PBXTargetDependency */,
+			);
+			name = AgendaTelefonicaTests;
+			productName = AgendaTelefonicaTests;
+			productReference = C3BCE50E20FE6EC50099B709 /* AgendaTelefonicaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C3BCE51820FE6EC50099B709 /* AgendaTelefonicaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3BCE52820FE6EC50099B709 /* Build configuration list for PBXNativeTarget "AgendaTelefonicaUITests" */;
+			buildPhases = (
+				C3BCE51520FE6EC50099B709 /* Sources */,
+				C3BCE51620FE6EC50099B709 /* Frameworks */,
+				C3BCE51720FE6EC50099B709 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C3BCE51B20FE6EC50099B709 /* PBXTargetDependency */,
+			);
+			name = AgendaTelefonicaUITests;
+			productName = AgendaTelefonicaUITests;
+			productReference = C3BCE51920FE6EC50099B709 /* AgendaTelefonicaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C3BCE4F220FE6EC40099B709 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "João Felipe Maciel de Brito Barros";
+				TargetAttributes = {
+					C3BCE4F920FE6EC50099B709 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					C3BCE50D20FE6EC50099B709 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C3BCE4F920FE6EC50099B709;
+					};
+					C3BCE51820FE6EC50099B709 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C3BCE4F920FE6EC50099B709;
+					};
+				};
+			};
+			buildConfigurationList = C3BCE4F520FE6EC40099B709 /* Build configuration list for PBXProject "AgendaTelefonica" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C3BCE4F120FE6EC40099B709;
+			productRefGroup = C3BCE4FB20FE6EC50099B709 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C3BCE4F920FE6EC50099B709 /* AgendaTelefonica */,
+				C3BCE50D20FE6EC50099B709 /* AgendaTelefonicaTests */,
+				C3BCE51820FE6EC50099B709 /* AgendaTelefonicaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C3BCE4F820FE6EC50099B709 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8392E24820FF676400FDB8E5 /* Colors.json in Resources */,
+				831B581E2100C48000620585 /* Contatos.storyboard in Resources */,
+				831B58162100BEA000620585 /* Main.storyboard in Resources */,
+				8392E24620FF670C00FDB8E5 /* Localizable.strings in Resources */,
+				831B58182100BEFF00620585 /* Launch Screen.storyboard in Resources */,
+				C3BCE50520FE6EC50099B709 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3BCE50C20FE6EC50099B709 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3BCE51720FE6EC50099B709 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		494E09F4D959EF14B65979A7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AgendaTelefonica/Pods-AgendaTelefonica-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AgendaTelefonica/Pods-AgendaTelefonica-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8392E24A20FF69B600FDB8E5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT\"/SwiftGen/bin/swiftgen strings -t structured-swift3 \"$PROJECT_DIR/$PROJECT_NAME/Application/Supporting Files/Generators/Localizable.strings\" --output \"$PROJECT_DIR/$PROJECT_NAME/Application/Supporting Files/Generated/Localizable.swift\"\n\n\"$PODS_ROOT\"/SwiftGen/bin/swiftgen xcassets -t swift3 \"$PROJECT_DIR/$PROJECT_NAME/Application/Supporting Files/Assets.xcassets\" --output \"$PROJECT_DIR/$PROJECT_NAME/Application/Supporting Files/Generated/Assets.swift\"\n\n\"$PODS_ROOT\"/SwiftGen/bin/swiftgen colors -t swift3 \"$PROJECT_DIR/$PROJECT_NAME/Application/Supporting Files/Generators/Colors.json\" --output \"$PROJECT_DIR/$PROJECT_NAME/Application/Supporting Files/Generated/Colors.swift\"\n\n\"$PODS_ROOT\"/SwiftGen/bin/swiftgen storyboards -t swift3 \"$PROJECT_DIR/$PROJECT_NAME\" --output \"$PROJECT_DIR/$PROJECT_NAME/Application/Supporting Files/Generated/Storyboard.swift\"";
+		};
+		E071A60E9F64369AFC45C241 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AgendaTelefonica-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C3BCE4F620FE6EC50099B709 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8392E25220FF6EA800FDB8E5 /* Storyboard.swift in Sources */,
+				8392E25320FF6EA800FDB8E5 /* Colors.swift in Sources */,
+				8392E25720FF746300FDB8E5 /* LoginRequestFactory.swift in Sources */,
+				831B58142100B78200620585 /* UserViewModel.swift in Sources */,
+				C3BCE50020FE6EC50099B709 /* LoginViewController.swift in Sources */,
+				831B58292100CCD200620585 /* ContatosViewModel.swift in Sources */,
+				831B58202100C4FF00620585 /* ContatosViewController.swift in Sources */,
+				C3BCE4FE20FE6EC50099B709 /* AppDelegate.swift in Sources */,
+				831B582E2100D03500620585 /* ContatoService.swift in Sources */,
+				831B581A2100C2E800620585 /* SessionControl.swift in Sources */,
+				831B582C2100D01D00620585 /* ContatoRequestFactory.swift in Sources */,
+				8392E25C20FF782900FDB8E5 /* User.swift in Sources */,
+				8392E25420FF6EA800FDB8E5 /* Localizable.swift in Sources */,
+				831B58272100C6AA00620585 /* Contato.swift in Sources */,
+				8392E25120FF6EA800FDB8E5 /* Assets.swift in Sources */,
+				8392E25920FF747F00FDB8E5 /* LoginService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3BCE50A20FE6EC50099B709 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3BCE51320FE6EC50099B709 /* AgendaTelefonicaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3BCE51520FE6EC50099B709 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3BCE51E20FE6EC50099B709 /* AgendaTelefonicaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C3BCE51020FE6EC50099B709 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C3BCE4F920FE6EC50099B709 /* AgendaTelefonica */;
+			targetProxy = C3BCE50F20FE6EC50099B709 /* PBXContainerItemProxy */;
+		};
+		C3BCE51B20FE6EC50099B709 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C3BCE4F920FE6EC50099B709 /* AgendaTelefonica */;
+			targetProxy = C3BCE51A20FE6EC50099B709 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C3BCE52020FE6EC50099B709 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C3BCE52120FE6EC50099B709 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C3BCE52320FE6EC50099B709 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6A4D03568760385F2B857FF /* Pods-AgendaTelefonica.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "$(SRCROOT)/AgendaTelefonicaTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.Nati.AgendaTelefonica;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C3BCE52420FE6EC50099B709 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A46378D08CCE290E93AF458F /* Pods-AgendaTelefonica.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "$(SRCROOT)/AgendaTelefonicaTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.Nati.AgendaTelefonica;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C3BCE52620FE6EC50099B709 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AgendaTelefonicaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.Nati.AgendaTelefonicaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AgendaTelefonica.app/AgendaTelefonica";
+			};
+			name = Debug;
+		};
+		C3BCE52720FE6EC50099B709 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AgendaTelefonicaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.Nati.AgendaTelefonicaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AgendaTelefonica.app/AgendaTelefonica";
+			};
+			name = Release;
+		};
+		C3BCE52920FE6EC50099B709 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AgendaTelefonicaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.Nati.AgendaTelefonicaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AgendaTelefonica;
+			};
+			name = Debug;
+		};
+		C3BCE52A20FE6EC50099B709 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AgendaTelefonicaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.Nati.AgendaTelefonicaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AgendaTelefonica;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C3BCE4F520FE6EC40099B709 /* Build configuration list for PBXProject "AgendaTelefonica" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3BCE52020FE6EC50099B709 /* Debug */,
+				C3BCE52120FE6EC50099B709 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3BCE52220FE6EC50099B709 /* Build configuration list for PBXNativeTarget "AgendaTelefonica" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3BCE52320FE6EC50099B709 /* Debug */,
+				C3BCE52420FE6EC50099B709 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3BCE52520FE6EC50099B709 /* Build configuration list for PBXNativeTarget "AgendaTelefonicaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3BCE52620FE6EC50099B709 /* Debug */,
+				C3BCE52720FE6EC50099B709 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3BCE52820FE6EC50099B709 /* Build configuration list for PBXNativeTarget "AgendaTelefonicaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3BCE52920FE6EC50099B709 /* Debug */,
+				C3BCE52A20FE6EC50099B709 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C3BCE4F220FE6EC40099B709 /* Project object */;
+}
