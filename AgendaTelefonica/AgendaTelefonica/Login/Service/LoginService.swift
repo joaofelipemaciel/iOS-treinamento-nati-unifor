@@ -39,6 +39,8 @@ class LoginService {
                     SessionControl.setHeadersParams(headers: response.response?.allHeaderFields)
                 }
                 
+                self.delegate.postLoginSuccess()
+                
             case .failure(let error):
                 
                 self.delegate.postLoginFailure(error: error.localizedDescription)

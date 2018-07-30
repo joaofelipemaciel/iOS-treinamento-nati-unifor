@@ -26,6 +26,8 @@
 		8392E25720FF746300FDB8E5 /* LoginRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392E25620FF746300FDB8E5 /* LoginRequestFactory.swift */; };
 		8392E25920FF747F00FDB8E5 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392E25820FF747F00FDB8E5 /* LoginService.swift */; };
 		8392E25C20FF782900FDB8E5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392E25B20FF782900FDB8E5 /* User.swift */; };
+		C32AA127210F91E30070E9CE /* ContatoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32AA125210F91E30070E9CE /* ContatoTableViewCell.swift */; };
+		C32AA128210F91E30070E9CE /* ContatoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32AA126210F91E30070E9CE /* ContatoTableViewCell.xib */; };
 		C3BCE4FE20FE6EC50099B709 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BCE4FD20FE6EC50099B709 /* AppDelegate.swift */; };
 		C3BCE50020FE6EC50099B709 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BCE4FF20FE6EC50099B709 /* LoginViewController.swift */; };
 		C3BCE50520FE6EC50099B709 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3BCE50420FE6EC50099B709 /* Assets.xcassets */; };
@@ -73,6 +75,8 @@
 		8392E25B20FF782900FDB8E5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A46378D08CCE290E93AF458F /* Pods-AgendaTelefonica.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgendaTelefonica.release.xcconfig"; path = "Pods/Target Support Files/Pods-AgendaTelefonica/Pods-AgendaTelefonica.release.xcconfig"; sourceTree = "<group>"; };
 		B597981F389274E764BE0143 /* Pods_AgendaTelefonica.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AgendaTelefonica.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C32AA125210F91E30070E9CE /* ContatoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoTableViewCell.swift; sourceTree = "<group>"; };
+		C32AA126210F91E30070E9CE /* ContatoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContatoTableViewCell.xib; sourceTree = "<group>"; };
 		C3BCE4FA20FE6EC50099B709 /* AgendaTelefonica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgendaTelefonica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3BCE4FD20FE6EC50099B709 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3BCE4FF20FE6EC50099B709 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +158,8 @@
 			isa = PBXGroup;
 			children = (
 				831B581F2100C4FF00620585 /* ContatosViewController.swift */,
+				C32AA125210F91E30070E9CE /* ContatoTableViewCell.swift */,
+				C32AA126210F91E30070E9CE /* ContatoTableViewCell.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -383,6 +389,7 @@
 				TargetAttributes = {
 					C3BCE4F920FE6EC50099B709 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0940;
 						ProvisioningStyle = Automatic;
 					};
 					C3BCE50D20FE6EC50099B709 = {
@@ -422,6 +429,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C32AA128210F91E30070E9CE /* ContatoTableViewCell.xib in Resources */,
 				8392E24820FF676400FDB8E5 /* Colors.json in Resources */,
 				831B581E2100C48000620585 /* Contatos.storyboard in Resources */,
 				831B58162100BEA000620585 /* Main.storyboard in Resources */,
@@ -531,6 +539,7 @@
 				831B582C2100D01D00620585 /* ContatoRequestFactory.swift in Sources */,
 				8392E25C20FF782900FDB8E5 /* User.swift in Sources */,
 				8392E25420FF6EA800FDB8E5 /* Localizable.swift in Sources */,
+				C32AA127210F91E30070E9CE /* ContatoTableViewCell.swift in Sources */,
 				831B58272100C6AA00620585 /* Contato.swift in Sources */,
 				8392E25120FF6EA800FDB8E5 /* Assets.swift in Sources */,
 				8392E25920FF747F00FDB8E5 /* LoginService.swift in Sources */,
@@ -681,11 +690,14 @@
 			baseConfigurationReference = D6A4D03568760385F2B857FF /* Pods-AgendaTelefonica.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/AgendaTelefonicaTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.Nati.AgendaTelefonica;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AgendaTelefonica/Contatos/Controllers/AgendaTelefonica-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -696,11 +708,13 @@
 			baseConfigurationReference = A46378D08CCE290E93AF458F /* Pods-AgendaTelefonica.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/AgendaTelefonicaTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.Nati.AgendaTelefonica;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AgendaTelefonica/Contatos/Controllers/AgendaTelefonica-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -50,7 +50,7 @@ class LoginViewController: UIViewController {
     //MARK: - Actions
     @IBAction func logar(_ sender: Any) {
     
-        if let email = self.email.text, let senha = self.senha.text{
+        if let email = self.email.text, let senha = self.senha.text {
             
             self.service.postLogin(email: email, senha: senha)
         } 
@@ -58,6 +58,7 @@ class LoginViewController: UIViewController {
 }
 
 extension LoginViewController: LoginServiceDelegate {
+    
     func postLoginSuccess() {
         self.perform(segue: StoryboardSegue.Main.segueEntrar)
     }
