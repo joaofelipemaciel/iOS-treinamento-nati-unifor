@@ -27,11 +27,13 @@ class LoginViewController: UIViewController {
     
         self.service = LoginService(delegate: self)
         
+//Deixar setado para nao ficar digitando toda vez ao entrar
         self.email.text = "joaofelipe@gmail.com"
         self.senha.text = "12345678"
         
         self.agendaTelefonica.image = Asset.agendaTelefonica.image
-        
+
+//Verificar o que significa o L10n...
         self.email.placeholder = L10n.Login.entrar
         self.senha.placeholder = L10n.Login.senha
         

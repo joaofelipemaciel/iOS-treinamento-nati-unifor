@@ -13,6 +13,13 @@ struct  ContatoView {
     
     var nome: String = ""
     var email: String = ""
+    var telefone: String = ""
+    var avatar: String = ""
+
+    var avatarUrl: URL? {
+        return URL(string: self.avatar)
+    }
+    
 }
 
 class ContatosViewModel {

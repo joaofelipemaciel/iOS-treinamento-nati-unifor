@@ -8,10 +8,11 @@
 
 import UIKit
 import Reusable
+import Kingfisher
 
 class ContatoTableViewCell: UITableViewCell, NibReusable {
 
-    @IBOutlet weak var comtatoImagem: UIImageView!
+    @IBOutlet weak var contatoImagem: UIImageView!
     @IBOutlet weak var descricaoFoto: UILabel!
    
     override func awakeFromNib() {
@@ -22,6 +23,7 @@ class ContatoTableViewCell: UITableViewCell, NibReusable {
     func bind(contato: ContatoView) {
         
         self.descricaoFoto.text = contato.nome
+//        self.contatoImagem.kf.setImage(with: contato.avatarUrl)
     }
     
 }
