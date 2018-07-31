@@ -6,22 +6,27 @@
 //  Copyright © 2018 João Felipe Maciel de Brito Barros. All rights reserved.
 //
 
+import Foundation
 import UIKit
+import Reusable
 
 class ContatosViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var navigationBar: UINavigationItem!
     
     var service: ContatoService!
     
+    var contatos: [ContatoView] = []
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Contatos"
         self.title = L10n.Contatos.title
         self.service = ContatoService(delegate: self)
-        self.service.getContatos()        
+        self.tableView.register(cellType: ContatoTableViewCell.self)
+        self.service.getContatos()
+        self.title = "Contatos"
+        
     }
 }
 
@@ -29,14 +34,39 @@ extension ContatosViewController: ContatoServiceDelegate {
     
     func getContatosSuccess() {
         
-        for contato in ContatosViewModel.get() {
-            print(contato.nome)
-        }
+        self.contatos = ContatosViewModel.get()
+        self.tableView.reloadData()
+        
+//        for contato in ContatosViewModel.get() {
+//           print(contato.nome)
+//        }
     }
     
     func getContatosFailure(error: String) {
-    
+        print(error)
     }
-
 }
+
+extension ContatosViewController: UITableViewDelegate, UITableViewDataSource {
+  
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return self.contatos.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(for: indexPath) as ContatoTableViewCell
+        
+        cell.bind(contato: self.contatos[indexPath.row])
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return 120
+    }
+}
+
 

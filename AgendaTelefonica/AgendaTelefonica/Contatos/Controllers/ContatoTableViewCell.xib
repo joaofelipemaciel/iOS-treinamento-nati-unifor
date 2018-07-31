@@ -29,7 +29,7 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="128" id="7v6-kT-A2Z" customClass="ContatoTableViewCell" customModule="AgendaTelefonica" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="128"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7v6-kT-A2Z" id="1fn-oV-lri">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7v6-kT-A2Z" id="1fn-oV-lri" customClass="ContatoTableViewCell" customModule="AgendaTelefonica" customModuleProvider="target">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="127.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
@@ -40,7 +40,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="homemImagem" translatesAutoresizingMaskIntoConstraints="NO" id="sFT-3K-nzL">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sFT-3K-nzL">
                         <rect key="frame" x="0.0" y="0.0" width="149" height="128"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
@@ -54,10 +54,7 @@
                 </subviews>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="wwY-mn-v9P"/>
-            <point key="canvasLocation" x="25" y="104"/>
+            <point key="canvasLocation" x="72" y="106"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="homemImagem" width="288" height="316"/>
-    </resources>
 </document>

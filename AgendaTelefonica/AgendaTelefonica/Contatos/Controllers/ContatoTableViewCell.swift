@@ -7,20 +7,21 @@
 //
 
 import UIKit
+import Reusable
 
-class ContatoTableViewCell: UITableViewCell {
+class ContatoTableViewCell: UITableViewCell, NibReusable {
 
-    @IBOutlet weak var homemImagem: UIImageView!
+    @IBOutlet weak var comtatoImagem: UIImageView!
     @IBOutlet weak var descricaoFoto: UILabel!
+   
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func bind(contato: ContatoView) {
+        
+        self.descricaoFoto.text = contato.nome
     }
     
 }
