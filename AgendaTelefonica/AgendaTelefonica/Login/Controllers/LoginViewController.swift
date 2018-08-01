@@ -63,6 +63,7 @@ extension LoginViewController: LoginServiceDelegate {
     
     func postLoginSuccess() {
         self.perform(segue: StoryboardSegue.Main.segueEntrar)
+//        self.show(StoryboardScene.Contatos., sender: nil)
     }
     
     func postLoginFailure(error: String) {

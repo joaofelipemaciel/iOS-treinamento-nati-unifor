@@ -23,7 +23,7 @@ class ContatoTableViewCell: UITableViewCell, NibReusable {
     func bind(contato: ContatoView) {
         
         self.descricaoFoto.text = contato.nome
-//        self.contatoImagem.kf.setImage(with: contato.avatarUrl)
+        self.contatoImagem.kf.setImage(with: contato.avatarUrl)
     }
     
 }

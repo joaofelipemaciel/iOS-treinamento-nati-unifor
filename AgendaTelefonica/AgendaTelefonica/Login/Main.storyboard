@@ -42,6 +42,7 @@
                                 <state key="normal" title="Entrar"/>
                                 <connections>
                                     <action selector="logar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xa2-hp-BTg"/>
+                                    <segue destination="Hvl-eZ-Ibe" kind="show" identifier="segueEntrar" id="FFW-4P-c11"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bb0-PE-IOt">
@@ -78,7 +79,6 @@
                         <outlet property="email" destination="nuE-YQ-cFh" id="Cfy-Hz-YSs"/>
                         <outlet property="entrarButton" destination="DQt-hp-cYf" id="jHC-XT-1BM"/>
                         <outlet property="senha" destination="Isf-iU-oWB" id="ijt-ER-ugW"/>
-                        <segue destination="Hvl-eZ-Ibe" kind="show" identifier="segueEntrar" id="1qw-yO-u7o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -90,7 +90,7 @@
                 <viewControllerPlaceholder storyboardName="Contatos" id="Hvl-eZ-Ibe" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="edg-uy-AYm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="690" y="30"/>
+            <point key="canvasLocation" x="1040" y="52"/>
         </scene>
     </scenes>
     <resources>

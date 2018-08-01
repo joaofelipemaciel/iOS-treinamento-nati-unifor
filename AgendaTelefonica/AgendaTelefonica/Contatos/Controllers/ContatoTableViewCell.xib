@@ -20,25 +20,28 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="127.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="agendaTelefonica" translatesAutoresizingMaskIntoConstraints="NO" id="sFT-3K-nzL">
-                        <rect key="frame" x="8" y="14" width="100" height="100"/>
+                    <imageView multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="agendaTelefonica" translatesAutoresizingMaskIntoConstraints="NO" id="sFT-3K-nzL">
+                        <rect key="frame" x="0.0" y="0.0" width="115" height="128"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="100" id="knp-GQ-zIw"/>
-                            <constraint firstAttribute="width" constant="100" id="zk5-cR-NPF"/>
+                            <constraint firstAttribute="height" constant="128" id="knp-GQ-zIw"/>
+                            <constraint firstAttribute="width" constant="115" id="zk5-cR-NPF"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WaJ-Sg-Ac2">
-                        <rect key="frame" x="116" y="19" width="180" height="90"/>
+                        <rect key="frame" x="123" y="19" width="74" height="90"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="WaJ-Sg-Ac2" firstAttribute="centerY" secondItem="1fn-oV-lri" secondAttribute="centerY" id="6wE-Hc-vWS"/>
+                    <constraint firstItem="WaJ-Sg-Ac2" firstAttribute="centerX" secondItem="1fn-oV-lri" secondAttribute="centerX" id="7Kc-te-nll"/>
                     <constraint firstItem="WaJ-Sg-Ac2" firstAttribute="leading" secondItem="sFT-3K-nzL" secondAttribute="trailing" constant="8" id="CDM-Bc-Adu"/>
                     <constraint firstItem="WaJ-Sg-Ac2" firstAttribute="top" secondItem="1fn-oV-lri" secondAttribute="topMargin" constant="8" id="ZOV-Jg-8mm"/>
-                    <constraint firstItem="sFT-3K-nzL" firstAttribute="leading" secondItem="1fn-oV-lri" secondAttribute="leading" constant="8" id="ibo-hr-3Jc"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="WaJ-Sg-Ac2" secondAttribute="trailing" constant="8" id="oFJ-Pv-1nt"/>
+                    <constraint firstItem="sFT-3K-nzL" firstAttribute="centerY" secondItem="WaJ-Sg-Ac2" secondAttribute="centerY" id="hPM-va-1sX"/>
+                    <constraint firstItem="sFT-3K-nzL" firstAttribute="leading" secondItem="1fn-oV-lri" secondAttribute="leading" id="ibo-hr-3Jc"/>
+                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="WaJ-Sg-Ac2" secondAttribute="trailing" constant="8" id="oFJ-Pv-1nt"/>
                     <constraint firstAttribute="bottomMargin" secondItem="WaJ-Sg-Ac2" secondAttribute="bottom" constant="8" id="quF-WR-3hW"/>
                     <constraint firstItem="sFT-3K-nzL" firstAttribute="centerY" secondItem="1fn-oV-lri" secondAttribute="centerY" id="vSf-E7-hzP"/>
                 </constraints>
@@ -48,7 +51,7 @@
                 <outlet property="contatoImagem" destination="sFT-3K-nzL" id="u8I-9m-40W"/>
                 <outlet property="descricaoFoto" destination="WaJ-Sg-Ac2" id="Ha7-cW-dMh"/>
             </connections>
-            <point key="canvasLocation" x="72" y="106"/>
+            <point key="canvasLocation" x="383" y="140"/>
         </tableViewCell>
     </objects>
     <resources>
