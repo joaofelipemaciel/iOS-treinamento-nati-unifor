@@ -8,12 +8,39 @@
 
 import UIKit
 
-class ExibirContatoViewController: UIViewController {
+protocol ExibirContatoViewControllerDelegate {
+    
+    func atualizar()
+}
 
+
+class ExibirContatoViewController: UIViewController {
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var emailLabel: UILabel!
+    var programVar : Int?
+    var contatos: [ContatoView] = []
+
+    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.contatos = ContatosViewModel.get()
+        
+        if let fooOffset = self.contatos.index(where: {$0.id == programVar}) {
+            print(fooOffset)
+            self.nameLabel.text = self.contatos[fooOffset].nome
+            self.emailLabel.text = self.contatos[fooOffset].email
+            
+        } else {
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {

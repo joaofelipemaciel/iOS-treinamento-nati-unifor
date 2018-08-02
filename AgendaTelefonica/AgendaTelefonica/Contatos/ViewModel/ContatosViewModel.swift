@@ -11,6 +11,7 @@ import Foundation
 //Nunca colocar options
 struct  ContatoView {
     
+    var id: Int?
     var nome: String = ""
     var email: String = ""
     var telefone: String = ""
@@ -34,6 +35,7 @@ class ContatosViewModel {
         
         var contatoView = ContatoView()
         
+        contatoView.id =  contato.id.value
         contatoView.nome = contato.nome ?? ""
         contatoView.email = contato.email ?? ""
         contatoView.avatar = contato.avatar ?? ""

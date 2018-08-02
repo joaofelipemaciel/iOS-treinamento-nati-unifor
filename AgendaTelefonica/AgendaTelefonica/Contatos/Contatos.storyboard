@@ -18,9 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="ibp-Af-ErA">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ibp-Af-ErA">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="GeP-Db-Nsi" id="8qC-lp-oNB"/>
                                     <outlet property="delegate" destination="GeP-Db-Nsi" id="MEP-5S-5Pb"/>
@@ -29,43 +29,64 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="xSD-WA-zme" firstAttribute="bottom" secondItem="ibp-Af-ErA" secondAttribute="bottom" id="DaP-Lw-ogV"/>
-                            <constraint firstItem="xSD-WA-zme" firstAttribute="trailing" secondItem="ibp-Af-ErA" secondAttribute="trailing" id="vmA-0Q-tAT"/>
-                            <constraint firstItem="ibp-Af-ErA" firstAttribute="top" secondItem="xSD-WA-zme" secondAttribute="top" id="wIP-Oo-QBG"/>
-                            <constraint firstItem="ibp-Af-ErA" firstAttribute="leading" secondItem="xSD-WA-zme" secondAttribute="leading" id="yXB-e0-86d"/>
+                            <constraint firstItem="ibp-Af-ErA" firstAttribute="top" secondItem="xSD-WA-zme" secondAttribute="top" id="C9Y-dd-daZ"/>
+                            <constraint firstItem="xSD-WA-zme" firstAttribute="trailing" secondItem="ibp-Af-ErA" secondAttribute="trailing" id="Ci9-qd-6l4"/>
+                            <constraint firstItem="ibp-Af-ErA" firstAttribute="leading" secondItem="xSD-WA-zme" secondAttribute="leading" id="dav-OL-o88"/>
+                            <constraint firstItem="ibp-Af-ErA" firstAttribute="bottom" secondItem="xSD-WA-zme" secondAttribute="bottom" id="mlN-Ob-aWv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xSD-WA-zme"/>
                     </view>
                     <navigationItem key="navigationItem" id="vlf-Rn-567">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="YSG-0k-APP">
                             <connections>
-                                <segue destination="Q5E-7w-eQk" kind="show" id="djN-cN-vdc"/>
+                                <action selector="abrirCriar:" destination="GeP-Db-Nsi" id="KXY-0L-kWK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="ibp-Af-ErA" id="BIL-Nx-ku5"/>
-                        <segue destination="zhS-pL-44M" kind="show" id="BDR-r7-KiI"/>
+                        <segue destination="zhS-pL-44M" kind="show" identifier="segueDetalhe" id="BDR-r7-KiI"/>
+                        <segue destination="Q5E-7w-eQk" kind="show" identifier="segueCriar" id="1nd-s5-EMP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vQR-Vk-bhK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="972" y="-15.742128935532236"/>
         </scene>
-        <!--Detalhar Contato View Controller-->
+        <!--Exibir Contato View Controller-->
         <scene sceneID="OgC-jI-MAQ">
             <objects>
-                <viewController id="zhS-pL-44M" customClass="DetalharContatoViewController" customModule="AgendaTelefonica" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zhS-pL-44M" customClass="ExibirContatoViewController" customModule="AgendaTelefonica" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NxI-Y3-ZVr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xku-Ss-QOu">
+                                <rect key="frame" x="166" y="169" width="144" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0e8-Uk-JkU">
+                                <rect key="frame" x="164" y="112" width="117" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="DSu-bZ-oee"/>
                     </view>
+                    <connections>
+                        <outlet property="emailLabel" destination="Xku-Ss-QOu" id="Rfu-Or-4yh"/>
+                        <outlet property="nameLabel" destination="0e8-Uk-JkU" id="UtG-W4-uUW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tc9-bg-9HD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="972" y="772"/>
+            <point key="canvasLocation" x="972" y="771.36431784107947"/>
         </scene>
         <!--Criar Contato-->
         <scene sceneID="eol-RU-AUW">
@@ -101,10 +122,10 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uNy-BO-M6j" userLabel="cadastrarButton">
                                 <rect key="frame" x="16" y="437" width="343" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="criarContatoButton:" destination="Q5E-7w-eQk" eventType="touchUpInside" id="bSh-c8-J4V"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQP-W9-2kT" userLabel="cadastroLabel">
                                 <rect key="frame" x="16" y="108" width="343" height="21"/>
