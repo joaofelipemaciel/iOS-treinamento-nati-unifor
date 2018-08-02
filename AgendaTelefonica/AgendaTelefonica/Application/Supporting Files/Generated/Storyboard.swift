@@ -52,6 +52,8 @@ extension UIViewController {
 enum StoryboardScene {
   enum Contatos: StoryboardType {
     static let storyboardName = "Contatos"
+
+    static let initialScene = InitialSceneType<UINavigationController>(storyboard: Contatos.self)
   }
   enum LaunchScreen: StoryboardType {
     static let storyboardName = "Launch Screen"

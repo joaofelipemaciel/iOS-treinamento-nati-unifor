@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 import Reusable
+import Kingfisher
+import SVProgressHUD
 
 class ContatosViewController: UIViewController {
     
@@ -21,11 +23,12 @@ class ContatosViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Contatos"
         self.title = L10n.Contatos.title
         self.service = ContatoService(delegate: self)
         self.tableView.register(cellType: ContatoTableViewCell.self)
         self.service.getContatos()
-        self.title = "Contatos"
+        
         
     }
 }
@@ -49,6 +52,7 @@ extension ContatosViewController: ContatoServiceDelegate {
 
 extension ContatosViewController: UITableViewDelegate, UITableViewDataSource {
   
+     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return self.contatos.count

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e3g-Al-BOD">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -18,9 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ibp-Af-ErA">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="ibp-Af-ErA">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="GeP-Db-Nsi" id="8qC-lp-oNB"/>
                                     <outlet property="delegate" destination="GeP-Db-Nsi" id="MEP-5S-5Pb"/>
@@ -39,7 +39,7 @@
                     <navigationItem key="navigationItem" id="vlf-Rn-567">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="YSG-0k-APP">
                             <connections>
-                                <segue destination="Q5E-7w-eQk" kind="show" id="mTg-uC-R2W"/>
+                                <segue destination="Q5E-7w-eQk" kind="show" id="djN-cN-vdc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -137,6 +137,11 @@
                         <viewLayoutGuide key="safeArea" id="fY5-YE-oAT"/>
                     </view>
                     <connections>
+                        <outlet property="criarContatoButton" destination="uNy-BO-M6j" id="1u7-jn-6zS"/>
+                        <outlet property="emailContato" destination="8X5-vW-42o" id="pDy-1z-FvE"/>
+                        <outlet property="imagemContato" destination="Oj5-x4-p82" id="B1H-Hd-6Sx"/>
+                        <outlet property="nomeContato" destination="T53-KQ-hg9" id="ML5-ZE-SCs"/>
+                        <outlet property="telefoneContato" destination="Rzu-R0-mSk" id="oNs-a7-JGA"/>
                         <outlet property="view" destination="lCx-aC-P4j" id="DMD-j5-I8T"/>
                     </connections>
                 </viewController>

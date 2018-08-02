@@ -17,6 +17,7 @@ struct  ContatoView {
     var avatar: String = ""
 
     var avatarUrl: URL? {
+        
         return URL(string: self.avatar)
     }
     
@@ -35,15 +36,18 @@ class ContatosViewModel {
         
         contatoView.nome = contato.nome ?? ""
         contatoView.email = contato.email ?? ""
-        
+        contatoView.avatar = contato.avatar ?? ""
+//        contatoView.avatar.insert("s", at: String.Index.init(encodedOffset: 4))
         return contatoView
     }
     
+    //Vetor de contatos
     static func getAsView(sequence contatos: [Contato]) -> [ContatoView] {
         
         var contatosView = [ContatoView]()
         
         for contato in contatos {
+            
             contatosView.append(self.getAsView(contato))
         }
         

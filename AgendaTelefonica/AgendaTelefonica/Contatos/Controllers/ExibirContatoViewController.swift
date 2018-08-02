@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetalharContatoViewController: UIViewController {
+class ExibirContatoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

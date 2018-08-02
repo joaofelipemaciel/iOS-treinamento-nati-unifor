@@ -29,7 +29,8 @@
 		C32AA127210F91E30070E9CE /* ContatoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32AA125210F91E30070E9CE /* ContatoTableViewCell.swift */; };
 		C32AA128210F91E30070E9CE /* ContatoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32AA126210F91E30070E9CE /* ContatoTableViewCell.xib */; };
 		C36011AB2110D1EF00C593AB /* CriarContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36011AA2110D1EF00C593AB /* CriarContatoViewController.swift */; };
-		C3AE6DC42111E2A500F9E9E7 /* DetalharContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AE6DC32111E2A500F9E9E7 /* DetalharContatoViewController.swift */; };
+		C375E4E221135D4C00807B49 /* EditarContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C375E4E121135D4C00807B49 /* EditarContatoViewController.swift */; };
+		C3AE6DC42111E2A500F9E9E7 /* ExibirContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AE6DC32111E2A500F9E9E7 /* ExibirContatoViewController.swift */; };
 		C3BCE4FE20FE6EC50099B709 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BCE4FD20FE6EC50099B709 /* AppDelegate.swift */; };
 		C3BCE50020FE6EC50099B709 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BCE4FF20FE6EC50099B709 /* LoginViewController.swift */; };
 		C3BCE50520FE6EC50099B709 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3BCE50420FE6EC50099B709 /* Assets.xcassets */; };
@@ -80,7 +81,8 @@
 		C32AA125210F91E30070E9CE /* ContatoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoTableViewCell.swift; sourceTree = "<group>"; };
 		C32AA126210F91E30070E9CE /* ContatoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContatoTableViewCell.xib; sourceTree = "<group>"; };
 		C36011AA2110D1EF00C593AB /* CriarContatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriarContatoViewController.swift; sourceTree = "<group>"; };
-		C3AE6DC32111E2A500F9E9E7 /* DetalharContatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalharContatoViewController.swift; sourceTree = "<group>"; };
+		C375E4E121135D4C00807B49 /* EditarContatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarContatoViewController.swift; sourceTree = "<group>"; };
+		C3AE6DC32111E2A500F9E9E7 /* ExibirContatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExibirContatoViewController.swift; sourceTree = "<group>"; };
 		C3BCE4FA20FE6EC50099B709 /* AgendaTelefonica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgendaTelefonica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3BCE4FD20FE6EC50099B709 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3BCE4FF20FE6EC50099B709 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -165,7 +167,8 @@
 				C32AA125210F91E30070E9CE /* ContatoTableViewCell.swift */,
 				C32AA126210F91E30070E9CE /* ContatoTableViewCell.xib */,
 				C36011AA2110D1EF00C593AB /* CriarContatoViewController.swift */,
-				C3AE6DC32111E2A500F9E9E7 /* DetalharContatoViewController.swift */,
+				C3AE6DC32111E2A500F9E9E7 /* ExibirContatoViewController.swift */,
+				C375E4E121135D4C00807B49 /* EditarContatoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -536,13 +539,14 @@
 				8392E25320FF6EA800FDB8E5 /* Colors.swift in Sources */,
 				8392E25720FF746300FDB8E5 /* LoginRequestFactory.swift in Sources */,
 				831B58142100B78200620585 /* UserViewModel.swift in Sources */,
+				C375E4E221135D4C00807B49 /* EditarContatoViewController.swift in Sources */,
 				C36011AB2110D1EF00C593AB /* CriarContatoViewController.swift in Sources */,
 				C3BCE50020FE6EC50099B709 /* LoginViewController.swift in Sources */,
 				831B58292100CCD200620585 /* ContatosViewModel.swift in Sources */,
 				831B58202100C4FF00620585 /* ContatosViewController.swift in Sources */,
 				C3BCE4FE20FE6EC50099B709 /* AppDelegate.swift in Sources */,
 				831B582E2100D03500620585 /* ContatoService.swift in Sources */,
-				C3AE6DC42111E2A500F9E9E7 /* DetalharContatoViewController.swift in Sources */,
+				C3AE6DC42111E2A500F9E9E7 /* ExibirContatoViewController.swift in Sources */,
 				831B581A2100C2E800620585 /* SessionControl.swift in Sources */,
 				831B582C2100D01D00620585 /* ContatoRequestFactory.swift in Sources */,
 				8392E25C20FF782900FDB8E5 /* User.swift in Sources */,

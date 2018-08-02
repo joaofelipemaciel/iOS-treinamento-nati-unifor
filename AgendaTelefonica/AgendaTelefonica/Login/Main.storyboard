@@ -90,7 +90,7 @@
                 <viewControllerPlaceholder storyboardName="Contatos" id="Hvl-eZ-Ibe" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="edg-uy-AYm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1040" y="52"/>
+            <point key="canvasLocation" x="1114" y="97"/>
         </scene>
     </scenes>
     <resources>
