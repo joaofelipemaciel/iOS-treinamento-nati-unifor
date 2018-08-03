@@ -23,7 +23,6 @@ class ContatosViewController: UIViewController, CriarContatoViewControllerDelega
     
 //insercao de um vetor de contatos:
     var contatos: [ContatoView] = []
-    var selectedContact: Int = 0
   
 //metodo que é chamado toda vez que se carrega uma tela:
     override func viewDidLoad() {
@@ -37,11 +36,9 @@ class ContatosViewController: UIViewController, CriarContatoViewControllerDelega
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        
     }
     
     @IBAction func abrirCriar(_ sender: Any) {
-
         self.perform(segue: StoryboardSegue.Contatos.segueCriar)
     }
     
@@ -49,18 +46,17 @@ class ContatosViewController: UIViewController, CriarContatoViewControllerDelega
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let controller = segue.destination as? CriarContatoViewController {
+            
             controller.delegate = self
-        }
-        
-        if let controller = segue.destination as? ExibirContatoViewController{
-            controller.programVar = self.selectedContact
+            
+        } else if let controller = segue.destination as? ExibirContatoViewController, let id = sender as? Int{
+            
+            controller.programVar = id
         }
     }
     
     func atualizar() {
-        
         self.contatos = ContatosViewModel.get()
-        
         self.tableView.reloadData()
     }
 }
@@ -69,13 +65,9 @@ class ContatosViewController: UIViewController, CriarContatoViewControllerDelega
 extension ContatosViewController: ContatoServiceDelegate {
     
     func getContatosSuccess() {
-        
         self.contatos = ContatosViewModel.get()
         self.tableView.reloadData()
-        
-        
     }
-    
     func getContatosFailure(error: String) {
         print("Erro!")
     }
@@ -84,32 +76,26 @@ extension ContatosViewController: ContatoServiceDelegate {
 extension ContatosViewController: UITableViewDelegate, UITableViewDataSource {
      
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return self.contatos.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(for: indexPath) as ContatoTableViewCell
-        
         cell.bind(contato: self.contatos[indexPath.row])
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
         return 120
     }
     
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.selectedContact = self.contatos[indexPath.row].id!
         
         self.tableView.deselectRow(at: indexPath, animated: true)
-        self.perform(segue: StoryboardSegue.Contatos.segueDetalhe)
+        
+        self.perform(segue: StoryboardSegue.Contatos.segueDetalhe, sender: self.contatos[indexPath.row].id)
     }
-    
 }
 
 

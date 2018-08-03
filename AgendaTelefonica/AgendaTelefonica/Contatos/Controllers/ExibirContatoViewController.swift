@@ -9,35 +9,41 @@
 import UIKit
 
 protocol ExibirContatoViewControllerDelegate {
-    
     func atualizar()
 }
-
 
 class ExibirContatoViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
-    
+    @IBOutlet weak var telefoneLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
-    var programVar : Int?
-    var contatos: [ContatoView] = []
-
+    @IBOutlet weak var birthLabel: UILabel!
+    @IBOutlet weak var contactImage: UIImageView!
     
-   
+    var programVar : Int?
+    var contatos: ContatoView!
+    var id: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.contatos = ContatosViewModel.get()
+        self.contatos = ContatosViewModel.get(id: id)
         
         if let fooOffset = self.contatos.index(where: {$0.id == programVar}) {
             print(fooOffset)
             self.nameLabel.text = self.contatos[fooOffset].nome
+            self.telefoneLabel.text = self.contatos[fooOffset].telefone
             self.emailLabel.text = self.contatos[fooOffset].email
-            
+            contactImage.kf.setImage(with: contatos.avatarUrl
+            self.contactImage.image = self.contatos[fooOffset].avatarUrl
+//            self.birthLabel.text = self.contatos[fooOffset].aniversario
+//
+//            if let dateFormatterGet =  DateFormatter() {
+//            dateFormatterGet.dateFormat = "yyyy-MM-dd"
+//
+            //            self.imageContato.kf.setImage(with: contato.avatarUrl)
         } else {
             
         }
@@ -47,16 +53,4 @@ class ExibirContatoViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

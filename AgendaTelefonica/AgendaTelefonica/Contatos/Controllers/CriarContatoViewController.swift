@@ -58,6 +58,7 @@ extension CriarContatoViewController: ContatoServiceDelegate {
         print("Contato Salvo")
         
         self.delegate.atualizar()
+        self.navigationController?.popViewController(animated: true)
     }
     
     func getContatosFailure(error: String) {

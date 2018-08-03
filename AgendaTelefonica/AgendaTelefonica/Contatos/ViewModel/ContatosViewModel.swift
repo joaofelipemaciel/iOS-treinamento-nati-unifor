@@ -16,6 +16,7 @@ struct  ContatoView {
     var email: String = ""
     var telefone: String = ""
     var avatar: String = ""
+    var aniversario: Date = Date()
 
     var avatarUrl: URL? {
         
@@ -39,7 +40,11 @@ class ContatosViewModel {
         contatoView.nome = contato.nome ?? ""
         contatoView.email = contato.email ?? ""
         contatoView.avatar = contato.avatar ?? ""
-//        contatoView.avatar.insert("s", at: String.Index.init(encodedOffset: 4))
+        
+        if let aniversario = contato.aniversario.value {
+            contatoView.aniversario = Date(timeIntervalSince1970: aniversario)
+        }
+        
         return contatoView
     }
     
@@ -79,5 +84,13 @@ class ContatosViewModel {
         contatos.append(contentsOf: contatosModel)
         
         return self.getAsView(sequence: contatos)
+    }
+    
+    static func get(id: Int) -> ContatoView {
+        
+        let contatosModel = uiRealm.object(ofType: Contato.self, forPrimaryKey: id)
+            
+        return getAsView(contatosModel)
+        
     }
 }

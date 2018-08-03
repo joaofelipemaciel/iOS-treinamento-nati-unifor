@@ -14,7 +14,7 @@ class Contato: Object, Mappable {
 
     var id  = RealmOptional<Int>()
     @objc dynamic var nome: String?
-    @objc dynamic var aniversario: Date?
+    var aniversario = RealmOptional<Double>()
     @objc dynamic var email: String?
     @objc dynamic var telefone: String?
     @objc dynamic var avatar: String?
@@ -31,7 +31,7 @@ class Contato: Object, Mappable {
         
         self.id.value     <- map["id"]
         self.nome         <- map["name"]
-        self.aniversario  <- map["birth"]
+        self.aniversario.value  <- map["birth"]
         self.email        <- map["email"]
         self.telefone     <- map["phone"]
         self.avatar       <- map["picture"]
@@ -43,11 +43,8 @@ extension Contato {
     static func all() -> [Contato] {
         
         var contatos: [Contato] = []
-        
         let results = uiRealm.objects(Contato.self).sorted(byKeyPath: "nome", ascending: true)
-        
         contatos.append(contentsOf: results)
-        
         return contatos
     }
     
