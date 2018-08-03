@@ -13,7 +13,6 @@ import Kingfisher
 import SVProgressHUD
 
 protocol CriarContatoViewControllerDelegate {
-    
     func atualizar()
 }
 
@@ -30,7 +29,7 @@ class CriarContatoViewController: UIViewController {
     
     var delegate: CriarContatoViewControllerDelegate!
     
-        override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         //Adicionar contato - botao:
         self.service = ContatoService(delegate: self)
@@ -54,6 +53,7 @@ class CriarContatoViewController: UIViewController {
 }
 
 extension CriarContatoViewController: ContatoServiceDelegate {
+    
     func getContatosSuccess() {
         print("Contato Salvo")
         
@@ -65,4 +65,3 @@ extension CriarContatoViewController: ContatoServiceDelegate {
         print(error)
     }
 }
-

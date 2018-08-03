@@ -6,3 +6,5 @@
 "login.senha" = "Senha";
 
 "contatos.title" = "Contatos";
+"contatos.editar" = "Editar";
+"contatos.excluir" = "Excluir";

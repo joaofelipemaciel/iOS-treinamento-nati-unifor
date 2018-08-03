@@ -22,7 +22,6 @@ struct  ContatoView {
         
         return URL(string: self.avatar)
     }
-    
 }
 
 class ContatosViewModel {

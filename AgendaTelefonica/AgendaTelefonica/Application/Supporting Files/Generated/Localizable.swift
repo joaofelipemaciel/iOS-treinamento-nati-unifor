@@ -14,6 +14,10 @@ enum L10n {
   }
 
   enum Contatos {
+    /// Editar
+    static let editar = L10n.tr("Localizable", "contatos.editar")
+    /// Excluir
+    static let excluir = L10n.tr("Localizable", "contatos.excluir")
     /// Contatos
     static let title = L10n.tr("Localizable", "contatos.title")
   }

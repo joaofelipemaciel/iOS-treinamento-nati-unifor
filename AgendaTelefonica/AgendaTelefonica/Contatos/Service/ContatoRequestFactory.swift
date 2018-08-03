@@ -21,4 +21,10 @@ class ContatoRequestFactory {
         
         return Alamofire.request(baseUrl + "contacts", method: .get, headers: header)
     }
+    
+    static func del(contatoId: Int) -> DataRequest {
+        
+        return Alamofire.request(baseUrl + "contacts/\(contatoId)", method: .delete, encoding: JSONEncoding.default, headers: header)
+    }
+    
 }

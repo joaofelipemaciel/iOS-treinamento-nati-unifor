@@ -11,10 +11,11 @@ import Alamofire
 import AlamofireObjectMapper
 
 //protocol -> gera funcoes que devem ser implementadas obrigatoriamente
-protocol  ContatoServiceDelegate {
-    
-    func  getContatosSuccess()
+protocol ContatoServiceDelegate {
+        
+    func getContatosSuccess()
     func getContatosFailure(error: String)
+
 }
 
 class ContatoService {
@@ -36,14 +37,13 @@ class ContatoService {
                 if let contatos = response.result.value {
                     
                     ContatosViewModel.clear()
-                    
                     ContatosViewModel.save(contatos: contatos)
                 }
                 
                 self.delegate.getContatosSuccess()
                 
             case .failure(let error):
-                
+               
                 self.delegate.getContatosFailure(error: error.localizedDescription)
             }
         }
@@ -53,22 +53,38 @@ class ContatoService {
     
     ContatoRequestFactory.criarContato(nome: nomeContato, aniversario: aniversarioContato, email: emailContato, telefone: telefoneContato, imagem: imagemContato).validate().responseObject { (response: DataResponse<Contato>) in
     
-    switch response.result{
+        switch response.result{
     
-    case .success:
+        case .success:
     
-    if let contato = response.result.value{
+            if let contato = response.result.value{
     
-    ContatosViewModel.save(contatos: [contato])
+                ContatosViewModel.save(contatos: [contato])
+            }
+    
+            self.delegate.getContatosSuccess()
+    
+        case .failure(let error):
+    
+            self.delegate.getContatosFailure(error: error.localizedDescription)
+            }
+        }
     }
     
-    self.delegate.getContatosSuccess()
-    
-    case .failure(let error):
-    
-    self.delegate.getContatosFailure(error: error.localizedDescription)
+    func delContato(id: Int) {
+        
+        ContatoRequestFactory.del(contatoId: id).validate().responseObject { (response: DataResponse<Contato>) in
+            
+            switch response.result {
+                
+            case .success:
+                
+                self.delegate.getContatosSuccess()
+                
+            case .failure(let error):
+                
+                self.delegate.getContatosFailure(error: error.localizedDescription)
+            }
+        }
     }
-    }
-    }
-    
 }

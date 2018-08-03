@@ -106,6 +106,19 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2jc-Vq-Pzb">
                                 <rect key="frame" x="67" y="89" width="240" height="128"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztl-gR-LAE">
+                                <rect key="frame" x="261" y="576" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Excluir"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5U-i8-Rx8">
+                                <rect key="frame" x="70" y="576" width="40" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Editar"/>
+                                <connections>
+                                    <segue destination="Q5E-7w-eQk" kind="show" identifier="editarSegue" id="Xyq-wc-yUh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -145,14 +158,16 @@
                     <connections>
                         <outlet property="birthLabel" destination="cOP-F3-xhW" id="Aeu-Ng-80f"/>
                         <outlet property="contactImage" destination="2jc-Vq-Pzb" id="M1m-PW-itZ"/>
+                        <outlet property="editarButton" destination="R5U-i8-Rx8" id="ofw-7C-mch"/>
                         <outlet property="emailLabel" destination="Xku-Ss-QOu" id="Rfu-Or-4yh"/>
+                        <outlet property="excluirButton" destination="ztl-gR-LAE" id="c0e-Lb-Uub"/>
                         <outlet property="nameLabel" destination="0e8-Uk-JkU" id="UtG-W4-uUW"/>
                         <outlet property="telefoneLabel" destination="kMS-p5-6Yw" id="3Ga-CA-bsj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tc9-bg-9HD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="972" y="771.36431784107947"/>
+            <point key="canvasLocation" x="972" y="773"/>
         </scene>
         <!--Criar Contato-->
         <scene sceneID="eol-RU-AUW">
@@ -258,4 +273,7 @@
     <resources>
         <image name="Nome" width="16" height="16"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Xyq-wc-yUh"/>
+    </inferredMetricsTieBreakers>
 </document>

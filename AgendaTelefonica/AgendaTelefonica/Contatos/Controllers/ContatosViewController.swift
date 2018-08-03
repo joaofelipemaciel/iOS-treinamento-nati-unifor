@@ -12,15 +12,22 @@ import Reusable
 import Kingfisher
 import SVProgressHUD
 
-
-
 class ContatosViewController: UIViewController, CriarContatoViewControllerDelegate, ExibirContatoViewControllerDelegate {
+    
+    func atualizar() {
+        self.contatos = ContatosViewModel.get()
+        self.tableView.reloadData()
+    }
+
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBAction func abrirCriar(_ sender: Any) {
+        self.perform(segue: StoryboardSegue.Contatos.segueCriar)
+    }
+    
 //inserindo a veravel em que herda os metodos implementados da classe ContatoService:
     var service: ContatoService!
-    
 //insercao de um vetor de contatos:
     var contatos: [ContatoView] = []
   
@@ -33,34 +40,27 @@ class ContatosViewController: UIViewController, CriarContatoViewControllerDelega
         self.service = ContatoService(delegate: self)
         self.tableView.register(cellType: ContatoTableViewCell.self)
         self.service.getContatos()
-        
         self.tableView.delegate = self
         self.tableView.dataSource = self
     }
     
-    @IBAction func abrirCriar(_ sender: Any) {
-        self.perform(segue: StoryboardSegue.Contatos.segueCriar)
+//Esta funcao atualiza a tela cada vez que for aberta
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.service.getContatos()
     }
+
     
-//Deve inserir as? para atualizar
+    //Deve inserir as? para atualizar --> Esta funcao passa para a tela de detalhe o id do contato selecionado
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let controller = segue.destination as? CriarContatoViewController {
             
             controller.delegate = self
-            
-        } else if let controller = segue.destination as? ExibirContatoViewController, let id = sender as? Int{
-            
-            controller.programVar = id
         }
     }
-    
-    func atualizar() {
-        self.contatos = ContatosViewModel.get()
-        self.tableView.reloadData()
-    }
 }
-
 
 extension ContatosViewController: ContatoServiceDelegate {
     
@@ -68,8 +68,17 @@ extension ContatosViewController: ContatoServiceDelegate {
         self.contatos = ContatosViewModel.get()
         self.tableView.reloadData()
     }
+    
     func getContatosFailure(error: String) {
-        print("Erro!")
+        print(error)
+    }
+    
+    func criarContatoSuccess() {
+        
+    }
+    
+    func criarContatoFailure(error: String) {
+        print(error)
     }
 }
 
@@ -97,5 +106,3 @@ extension ContatosViewController: UITableViewDelegate, UITableViewDataSource {
         self.perform(segue: StoryboardSegue.Contatos.segueDetalhe, sender: self.contatos[indexPath.row].id)
     }
 }
-
-
