@@ -52,6 +52,8 @@ class CriarContatoViewController: UIViewController {
     }
 }
 
+
+
 extension CriarContatoViewController: ContatoServiceDelegate {
     
     func getContatosSuccess() {

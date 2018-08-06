@@ -33,12 +33,16 @@ class ContatoTableViewCell: UITableViewCell, NibReusable {
         self.imageContato.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0).isActive = true
         self.imageContato.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 0).isActive = true
         self.imageContato.widthAnchor.constraint(equalToConstant: 150).isActive = true
+        self.imageContato.layer.cornerRadius = self.imageContato.frame.size.width/2
+        self.imageContato.clipsToBounds = true
         
         self.addSubview(self.nome)
         self.nome.topAnchor.constraint(equalTo: self.topAnchor, constant: 0).isActive = true
         self.nome.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0).isActive = true
         self.nome.leftAnchor.constraint(equalTo: self.imageContato.rightAnchor, constant: 8).isActive = true
         self.nome.rightAnchor.constraint(equalTo: self.rightAnchor, constant: 0).isActive = true
+        self.nome.layer.borderColor = UIColor.lightGray.cgColor
+        self.nome.layer.borderWidth = 0.5
     }
 
     func bind(contato: ContatoView) {

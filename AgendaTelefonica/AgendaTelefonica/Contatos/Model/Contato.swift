@@ -14,7 +14,7 @@ class Contato: Object, Mappable {
 
     var id  = RealmOptional<Int>()
     @objc dynamic var nome: String?
-    var aniversario = RealmOptional<Double>()
+    @objc dynamic var aniversario: Date? = nil
     @objc dynamic var email: String?
     @objc dynamic var telefone: String?
     @objc dynamic var avatar: String?
@@ -31,7 +31,7 @@ class Contato: Object, Mappable {
         
         self.id.value     <- map["id"]
         self.nome         <- map["name"]
-        self.aniversario.value  <- map["birth"]
+        self.aniversario  <- map["birth"]
         self.email        <- map["email"]
         self.telefone     <- map["phone"]
         self.avatar       <- map["picture"]

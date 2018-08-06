@@ -87,4 +87,28 @@ class ContatoService {
             }
         }
     }
+    
+    func putContato(id: Int) {
+        
+        ContatoRequestFactory.put(contatoId: id).validate().responseObject { (response: DataResponse<Contato>) in
+        
+            switch response.result {
+                
+            case .success:
+                
+                if let contato = response.result.value {
+                    
+                    Contato.save(contato: contato)
+                    
+                    self.delegate.getContatosSuccess()
+                }
+                
+            case .failure:
+                
+                let errorMessage = ErrorUtils.errorHandler(response: response)
+                
+                self.delegate.getContatosFailure(error: errorMessage)
+            }
+        }
+    }
 }

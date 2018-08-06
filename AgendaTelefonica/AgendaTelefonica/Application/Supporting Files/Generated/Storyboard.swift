@@ -69,9 +69,9 @@ enum StoryboardScene {
 
 enum StoryboardSegue {
   enum Contatos: String, SegueType {
-    case editarSegue
     case segueCriar
     case segueDetalhe
+    case segueEditar
   }
   enum Main: String, SegueType {
     case segueEntrar

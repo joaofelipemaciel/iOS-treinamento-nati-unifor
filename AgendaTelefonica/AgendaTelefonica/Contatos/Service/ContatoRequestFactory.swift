@@ -27,4 +27,8 @@ class ContatoRequestFactory {
         return Alamofire.request(baseUrl + "contacts/\(contatoId)", method: .delete, encoding: JSONEncoding.default, headers: header)
     }
     
+    static func put(contatoId: Int) -> DataRequest {
+        
+        return Alamofire.request(baseUrl + "contacts/\(contatoId)", method: .put, encoding: JSONEncoding.default, headers: header)
+        }
 }

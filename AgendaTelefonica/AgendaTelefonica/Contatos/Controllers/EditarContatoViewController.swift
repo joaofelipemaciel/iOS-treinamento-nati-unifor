@@ -2,14 +2,24 @@
 //  EditarContatoViewController.swift
 //  AgendaTelefonica
 //
-//  Created by João Felipe Maciel on 02/08/2018.
+//  Created by João Felipe Maciel on 06/08/2018.
 //  Copyright © 2018 João Felipe Maciel de Brito Barros. All rights reserved.
 //
 
 import UIKit
+import RealmSwift
+import Foundation
+import Reusable
+import Kingfisher
+import SVProgressHUD
+
+protocol EditarContatoViewControllerDelegate {
+    func atualizar()
+}
 
 class EditarContatoViewController: UIViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

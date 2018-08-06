@@ -38,11 +38,13 @@ class ContatosViewModel {
         contatoView.id =  contato.id.value
         contatoView.nome = contato.nome ?? ""
         contatoView.email = contato.email ?? ""
+        contatoView.telefone = contato.telefone ?? ""
         contatoView.avatar = contato.avatar ?? ""
+//        contatoView.aniversario = contato.aniversario!
         
-        if let aniversario = contato.aniversario.value {
-            contatoView.aniversario = Date(timeIntervalSince1970: aniversario)
-        }
+//        if let aniversario = contato.aniversario {
+//            contatoView.aniversario = Date(timeIntervalSince1970: aniversario)
+//        }
         
         return contatoView
     }

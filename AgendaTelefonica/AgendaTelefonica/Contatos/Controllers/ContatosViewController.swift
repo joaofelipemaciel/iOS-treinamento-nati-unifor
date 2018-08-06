@@ -12,7 +12,7 @@ import Reusable
 import Kingfisher
 import SVProgressHUD
 
-class ContatosViewController: UIViewController, CriarContatoViewControllerDelegate, ExibirContatoViewControllerDelegate {
+class ContatosViewController: UIViewController, CriarContatoViewControllerDelegate, DetalharContatoViewControllerDelegate {
     
     func atualizar() {
         self.contatos = ContatosViewModel.get()
@@ -58,6 +58,13 @@ class ContatosViewController: UIViewController, CriarContatoViewControllerDelega
         if let controller = segue.destination as? CriarContatoViewController {
             
             controller.delegate = self
+            
+        } else if let controller = segue.destination as? DetalharContatoViewController {
+            
+            if let id = sender as? Int {
+                controller.id = id
+            }
+            
         }
     }
 }
