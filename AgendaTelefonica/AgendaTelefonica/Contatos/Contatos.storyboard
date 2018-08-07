@@ -53,7 +53,7 @@
             </objects>
             <point key="canvasLocation" x="972" y="-15.742128935532236"/>
         </scene>
-        <!--Detalhar Contato View Controller-->
+        <!--Title-->
         <scene sceneID="OgC-jI-MAQ">
             <objects>
                 <viewController id="zhS-pL-44M" customClass="DetalharContatoViewController" customModule="AgendaTelefonica" customModuleProvider="target" sceneMemberID="viewController">
@@ -95,11 +95,16 @@
                                 <rect key="frame" x="67" y="89" width="240" height="128"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztl-gR-LAE">
-                                <rect key="frame" x="16" y="561" width="343" height="30"/>
+                                <rect key="frame" x="16" y="605" width="343" height="30"/>
                                 <state key="normal" title="Excluir"/>
                                 <connections>
                                     <action selector="excluirContato:" destination="zhS-pL-44M" eventType="touchUpInside" id="Ryu-iC-mTo"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9b-wF-pgv">
+                                <rect key="frame" x="290" y="32" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -131,64 +136,23 @@
                         <viewLayoutGuide key="safeArea" id="DSu-bZ-oee"/>
                     </view>
                     <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationItem key="navigationItem" title="Title" id="Y1P-iy-3bA">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="od6-Xd-CpR"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="contactImage" destination="2jc-Vq-Pzb" id="M1m-PW-itZ"/>
                         <outlet property="emailLabel" destination="Xku-Ss-QOu" id="Rfu-Or-4yh"/>
                         <outlet property="excluirButton" destination="ztl-gR-LAE" id="c0e-Lb-Uub"/>
                         <outlet property="nameLabel" destination="0e8-Uk-JkU" id="UtG-W4-uUW"/>
                         <outlet property="telefoneLabel" destination="kMS-p5-6Yw" id="3Ga-CA-bsj"/>
-                        <segue destination="Q5E-7w-eQk" kind="show" identifier="segueEditar" id="e1E-It-jf8"/>
+                        <segue destination="Q5E-7w-eQk" kind="show" identifier="segueEditar" id="Paa-x0-p7A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tc9-bg-9HD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1017" y="767"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="arW-Bd-sEj">
-            <objects>
-                <viewController id="vhw-Lw-7zm" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="A0J-YR-lhh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vep-dJ-EbR">
-                                <rect key="frame" x="139" y="127" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q2N-iX-blX">
-                                <rect key="frame" x="139" y="207" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xdA-Sw-KGN">
-                                <rect key="frame" x="139" y="287" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eOl-ep-6jZ">
-                                <rect key="frame" x="139" y="381" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="S8N-Wa-fKs"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="96r-CD-X6I" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1784" y="767"/>
         </scene>
         <!--Criar Contato-->
         <scene sceneID="eol-RU-AUW">
@@ -295,6 +259,6 @@
         <image name="Nome" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="e1E-It-jf8"/>
+        <segue reference="Paa-x0-p7A"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -12,7 +12,7 @@ import Reusable
 import Kingfisher
 import SVProgressHUD
 
-class ContatosViewController: UIViewController, CriarContatoViewControllerDelegate, DetalharContatoViewControllerDelegate {
+class ContatosViewController: UIViewController, CriarContatoViewControllerDelegate {
     
     func atualizar() {
         self.contatos = ContatosViewModel.get()
@@ -54,11 +54,10 @@ class ContatosViewController: UIViewController, CriarContatoViewControllerDelega
     
     //Deve inserir as? para atualizar --> Esta funcao passa para a tela de detalhe o id do contato selecionado
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if let controller = segue.destination as? CriarContatoViewController {
-            
             controller.delegate = self
-            
+            controller.title = "Criar Contato"
+            controller.titleButton = "Cadastrar"
         } else if let controller = segue.destination as? DetalharContatoViewController {
             
             if let id = sender as? Int {
@@ -70,6 +69,22 @@ class ContatosViewController: UIViewController, CriarContatoViewControllerDelega
 }
 
 extension ContatosViewController: ContatoServiceDelegate {
+    func postContatosSuccess() {
+        print("O ERRO ERA AQUI")
+    }
+    
+    
+    func putContatosFailure(error: String) {
+        print(error)
+    }
+    
+    func postContatosFailure(error: String) {
+        print(error)
+    }
+    
+    func delContatosFailure(error: String) {
+        print(error)
+    }
     
     func getContatosSuccess() {
         self.contatos = ContatosViewModel.get()
@@ -80,13 +95,7 @@ extension ContatosViewController: ContatoServiceDelegate {
         print(error)
     }
     
-    func criarContatoSuccess() {
-        
-    }
-    
-    func criarContatoFailure(error: String) {
-        print(error)
-    }
+
 }
 
 extension ContatosViewController: UITableViewDelegate, UITableViewDataSource {
@@ -107,9 +116,7 @@ extension ContatosViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         self.tableView.deselectRow(at: indexPath, animated: true)
-        
         self.perform(segue: StoryboardSegue.Contatos.segueDetalhe, sender: self.contatos[indexPath.row].id)
     }
 }

@@ -35,7 +35,6 @@
 		C3BCE50520FE6EC50099B709 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3BCE50420FE6EC50099B709 /* Assets.xcassets */; };
 		C3BCE51320FE6EC50099B709 /* AgendaTelefonicaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BCE51220FE6EC50099B709 /* AgendaTelefonicaTests.swift */; };
 		C3BCE51E20FE6EC50099B709 /* AgendaTelefonicaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BCE51D20FE6EC50099B709 /* AgendaTelefonicaUITests.swift */; };
-		C3BD74BF21189B8E0031C7CA /* EditarContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BD74BE21189B8E0031C7CA /* EditarContatoViewController.swift */; };
 		E06A4267BFB409AB605C6CEB /* Pods_AgendaTelefonica.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B597981F389274E764BE0143 /* Pods_AgendaTelefonica.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,7 +92,6 @@
 		C3BCE51920FE6EC50099B709 /* AgendaTelefonicaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgendaTelefonicaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3BCE51D20FE6EC50099B709 /* AgendaTelefonicaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaTelefonicaUITests.swift; sourceTree = "<group>"; };
 		C3BCE51F20FE6EC50099B709 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C3BD74BE21189B8E0031C7CA /* EditarContatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarContatoViewController.swift; sourceTree = "<group>"; };
 		D6A4D03568760385F2B857FF /* Pods-AgendaTelefonica.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgendaTelefonica.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AgendaTelefonica/Pods-AgendaTelefonica.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,7 +165,6 @@
 				831B581F2100C4FF00620585 /* ContatosViewController.swift */,
 				C36011AA2110D1EF00C593AB /* CriarContatoViewController.swift */,
 				C3AE6DC32111E2A500F9E9E7 /* DetalharContatoViewController.swift */,
-				C3BD74BE21189B8E0031C7CA /* EditarContatoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -547,7 +544,6 @@
 				8392E25320FF6EA800FDB8E5 /* Colors.swift in Sources */,
 				8392E25720FF746300FDB8E5 /* LoginRequestFactory.swift in Sources */,
 				831B58142100B78200620585 /* UserViewModel.swift in Sources */,
-				C3BD74BF21189B8E0031C7CA /* EditarContatoViewController.swift in Sources */,
 				C36011AB2110D1EF00C593AB /* CriarContatoViewController.swift in Sources */,
 				C3BCE50020FE6EC50099B709 /* LoginViewController.swift in Sources */,
 				831B58292100CCD200620585 /* ContatosViewModel.swift in Sources */,

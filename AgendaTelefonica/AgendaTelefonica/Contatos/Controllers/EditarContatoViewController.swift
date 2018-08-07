@@ -18,7 +18,14 @@ protocol EditarContatoViewControllerDelegate {
 }
 
 class EditarContatoViewController: UIViewController {
-
+    @IBOutlet weak var imagemContato: UIImageView!
+    @IBOutlet weak var editName: UITextField!
+    @IBOutlet weak var editEmail: UITextField!
+    @IBOutlet weak var editTelefone: UITextField!
+    @IBOutlet weak var editImage: UITextField!
+    @IBOutlet weak var confirmButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

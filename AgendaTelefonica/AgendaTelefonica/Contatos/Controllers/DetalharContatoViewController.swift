@@ -13,10 +13,6 @@ import Reusable
 import Kingfisher
 import SVProgressHUD
 
-protocol DetalharContatoViewControllerDelegate {
-    func atualizar()
-}
-
 class DetalharContatoViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
@@ -33,40 +29,44 @@ class DetalharContatoViewController: UIViewController {
     var service: ContatoService!
     var contato: ContatoView!
     var id: Int = 0
+    var delegate: CriarContatoViewControllerDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
         self.service = ContatoService(delegate: self)
         self.contato = ContatosViewModel.get(id: id)
         self.title = "\(contato.nome)"
         self.nameLabel.text = contato.nome
         self.emailLabel.text = contato.email
         self.telefoneLabel.text = contato.telefone
-//      self.birthLabel.text = contato.aniversario
-        
         if let url = contato.avatarUrl {
             contactImage.kf.setImage(with: url)
         }
-        
         nameLabel.isEnabled = false
         emailLabel.isEnabled = false
         telefoneLabel.isEnabled = false
-        
         let editarButton = UIBarButtonItem(title: L10n.Contatos.editar, style: .plain, target: self, action: #selector(DetalharContatoViewController.editarContato))
         self.navigationItem.rightBarButtonItem = editarButton
-        
         self.excluirButton.setTitle(L10n.Contatos.excluir, for: .normal)
         self.excluirButton.layer.cornerRadius = self.excluirButton.bounds.height / 2
         self.excluirButton.backgroundColor = UIColor(red: 173/255, green: 216/255, blue: 230/255, alpha: 1)
     }
     
-    @objc func editarContato(sender: Any) {
-        
-        self.service.putContato(id: id)
-//        self.contato.id
-        
+    @objc func editarContato() {
+        self.perform(segue: StoryboardSegue.Contatos.segueEditar)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let controller = segue.destination as? CriarContatoViewController {
+            controller.delegate = self
+            if segue.identifier == "segueEditar" {
+            controller.title = "Editar Contato"
+            controller.titleButton = "Atualizar"
+            controller.id = self.id
+            }
+        }
+    }
+
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -83,15 +83,10 @@ class DetalharContatoViewController: UIViewController {
     }
 
     @IBAction func excluirContato(_ sender: Any) {
-    
         self.service.delContato(id: id)
-        
-        let alert = UIAlertController(title: "Contato Excluido", message: "O contato \(self.nameLabel.text!) foi excluído com sucesso", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Ok!", style: UIAlertActionStyle.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
     }
     
-    }
+}
 //
 //func didReceiveMemoryWarning() {
 //        super.didReceiveMemoryWarning()
@@ -103,14 +98,58 @@ class DetalharContatoViewController: UIViewController {
 //}
 
 extension DetalharContatoViewController: ContatoServiceDelegate {
-   
     func getContatosSuccess() {
-        print("Sucesso na exibicao!")
-//        self.delegate.atualizar()
-        self.navigationController?.popViewController(animated: true)
+        
+        let alert = UIAlertController(title: "Contato Excluido", message: "O contato \(self.nameLabel.text!) foi excluído com sucesso", preferredStyle: UIAlertControllerStyle.alert)
+        let action = UIAlertAction.init(title: "Ok!", style: UIAlertActionStyle.default) { (_) in
+            
+            self.delegate.atualizar()
+            self.navigationController?.popViewController(animated: true)
+        }
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
     }
     
     func getContatosFailure(error: String) {
+        print("Errooo")
+        
+        let alert = UIAlertController(title: "Contato Excluido", message: "O contato \(self.nameLabel.text!) foi excluído com sucesso", preferredStyle: UIAlertControllerStyle.alert)
+        let action = UIAlertAction.init(title: "Ok!", style: UIAlertActionStyle.default) { (_) in
+            
+            self.delegate.atualizar()
+            self.navigationController?.popViewController(animated: true)
+        }
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func putContatosFailure(error: String) {
         print(error)
+    }
+    
+    func delContatosFailure(error: String) {
+        print(error)
+        let alert = UIAlertController(title: "Contato Excluido", message: "O contato \(self.nameLabel.text!) foi excluído com sucesso", preferredStyle: UIAlertControllerStyle.alert)
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
+            UIAlertAction in
+            self.navigationController?.popViewController(animated: true)
+        }
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func delContatosSuccess() {
+        print("APAGUEI")
+    }
+    
+    func postContatosFailure(error: String) {
+        print(error)
+    } 
+
+}
+
+extension DetalharContatoViewController: CriarContatoViewControllerDelegate {
+    func atualizar() {
+        
     }
 }

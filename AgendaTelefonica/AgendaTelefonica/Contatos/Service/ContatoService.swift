@@ -15,7 +15,41 @@ protocol ContatoServiceDelegate {
         
     func getContatosSuccess()
     func getContatosFailure(error: String)
+    func postContatosSuccess()
+    func postContatosFailure(error: String)
+    func delContatosSuccess()
+    func delContatosFailure(error: String)
+    func putContatosSuccess()
+    func putContatosFailure(error: String)
 
+}
+
+extension ContatoServiceDelegate {
+    
+    func getContatosSuccess() {
+        fatalError("Precisa ser implementado")
+    }
+    func getContatosFailure() {
+        fatalError("Precisa ser implementado")
+    }
+    func postContatosSuccess() {
+        fatalError("Precisa ser implementado")
+    }
+    func postContatosFailure() {
+        fatalError("Precisa ser implementado")
+    }
+    func delContatosSuccess() {
+        fatalError("Precisa ser implementado")
+    }
+    func delContatosFailure() {
+        fatalError("Precisa ser implementado")
+    }
+    func putContatosSuccess() {
+        fatalError("Precisa ser implementado")
+    }
+    func putContatosFailure() {
+        fatalError("Precisa ser implementado")
+    }
 }
 
 class ContatoService {
@@ -51,7 +85,7 @@ class ContatoService {
     
     func postContato(nomeContato: String, aniversarioContato: Int, emailContato: String, telefoneContato: String, imagemContato: String){
     
-    ContatoRequestFactory.criarContato(nome: nomeContato, aniversario: aniversarioContato, email: emailContato, telefone: telefoneContato, imagem: imagemContato).validate().responseObject { (response: DataResponse<Contato>) in
+        ContatoRequestFactory.criarContato(nome: nomeContato, aniversario: aniversarioContato, email: emailContato, telefone: telefoneContato, imagem: imagemContato).validate().responseObject { (response: DataResponse<Contato>) in
     
         switch response.result{
     
@@ -62,11 +96,11 @@ class ContatoService {
                 ContatosViewModel.save(contatos: [contato])
             }
     
-            self.delegate.getContatosSuccess()
+            self.delegate.postContatosSuccess()
     
         case .failure(let error):
     
-            self.delegate.getContatosFailure(error: error.localizedDescription)
+            self.delegate.postContatosFailure(error: error.localizedDescription)
             }
         }
     }
@@ -79,35 +113,31 @@ class ContatoService {
                 
             case .success:
                 
-                self.delegate.getContatosSuccess()
+                self.delegate.delContatosSuccess()
                 
             case .failure(let error):
                 
-                self.delegate.getContatosFailure(error: error.localizedDescription)
+                self.delegate.delContatosFailure(error: error.localizedDescription)
             }
         }
     }
     
-    func putContato(id: Int) {
+    
+    //deixar isso mais bonito passando apenas o objeto contato para esse metodo
+    func putContato(id: Int,nomeContato: String, aniversarioContato: Int, emailContato: String, telefoneContato: String, imagemContato: String) {
         
-        ContatoRequestFactory.put(contatoId: id).validate().responseObject { (response: DataResponse<Contato>) in
+        ContatoRequestFactory.put(contatoId: id,nome: nomeContato, aniversario: aniversarioContato, email: emailContato, telefone: telefoneContato, imagem: imagemContato).validate().responseObject { (response: DataResponse<Contato>) in
         
             switch response.result {
-                
             case .success:
-                
                 if let contato = response.result.value {
                     
                     Contato.save(contato: contato)
-                    
-                    self.delegate.getContatosSuccess()
                 }
+                self.delegate.putContatosSuccess()
                 
-            case .failure:
-                
-                let errorMessage = ErrorUtils.errorHandler(response: response)
-                
-                self.delegate.getContatosFailure(error: errorMessage)
+            case .failure(let error):
+                self.delegate.putContatosFailure(error: error.localizedDescription)
             }
         }
     }
