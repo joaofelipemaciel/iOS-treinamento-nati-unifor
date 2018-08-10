@@ -5,7 +5,6 @@
 //  Created by administrador on 19/07/2018.
 //  Copyright © 2018 João Felipe Maciel de Brito Barros. All rights reserved.
 //
-
 import Foundation
 import RealmSwift
 import ObjectMapper
@@ -28,7 +27,6 @@ class Contato: Object, Mappable {
     }
     
     func mapping(map: Map) {
-        
         self.id.value     <- map["id"]
         self.nome         <- map["name"]
         self.aniversario  <- map["birth"]
@@ -41,7 +39,6 @@ class Contato: Object, Mappable {
 extension Contato {
     
     static func all() -> [Contato] {
-        
         var contatos: [Contato] = []
         let results = uiRealm.objects(Contato.self).sorted(byKeyPath: "nome", ascending: true)
         contatos.append(contentsOf: results)
@@ -51,22 +48,14 @@ extension Contato {
     static func allGrouped() -> [[Contato]] {
         
         let todosContatos = self.all()
-        
         var contatosOrdenados: [[Contato]] = []
         
         //        var todasIniciais = todosContatos.map { (contato: Contato) -> String in
-        //
         //            return String(describing: contato.nome.characters.first)
-        //        }
-        
         let todasIniciais = todosContatos.map({String(describing: $0.nome?.characters.first)})
-        
         var iniciais: [String] = []
-        
         for inicial in todasIniciais {
-            
             if !iniciais.contains(inicial) {
-                
                 iniciais.append(inicial)
             }
         }
@@ -74,20 +63,16 @@ extension Contato {
         for inicial in iniciais {
             
             let resultado = todosContatos.filter({String(describing: $0.nome?.characters.first) == inicial})
-            
             if !resultado.isEmpty {
-                
                 contatosOrdenados.append(resultado)
             }
         }
-        
         return contatosOrdenados
     }
     
     static func save(contato: Contato) {
         
         try! uiRealm.write {
-            
             uiRealm.add(contato, update: true)
         }
     }
@@ -95,7 +80,6 @@ extension Contato {
     static func saveAll(contatos: [Contato]) {
         
         try! uiRealm.write {
-            
             uiRealm.add(contatos, update: true)
         }
     }
@@ -103,9 +87,7 @@ extension Contato {
     static func delete(id: Int) {
         
         if let contato = uiRealm.object(ofType: Contato.self, forPrimaryKey: id) {
-            
             try! uiRealm.write {
-                
                 uiRealm.delete(contato)
             }
         }
@@ -114,11 +96,8 @@ extension Contato {
     static func deleteAll(){
         
         try! uiRealm.write {
-            
             let todosContatos = uiRealm.objects(Contato.self)
-            
             uiRealm.delete(todosContatos)
-            
         }
     }
 }

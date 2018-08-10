@@ -67,7 +67,7 @@ extension LoginViewController: LoginServiceDelegate {
     }
     
     func postLoginFailure(error: String) {
-        
+        print("Deu ruim!")
         print(error)
     }
 }

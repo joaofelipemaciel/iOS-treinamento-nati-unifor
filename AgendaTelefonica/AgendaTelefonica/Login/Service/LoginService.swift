@@ -31,19 +31,15 @@ class LoginService {
             case .success:
                 
                 if let user = response.result.value {
-                    
                     UserViewModel.clear()
-                    
                     UserViewModel.save(usuario: user)
-                    
                     SessionControl.setHeadersParams(headers: response.response?.allHeaderFields)
                 }
-                
                 self.delegate.postLoginSuccess()
                 
             case .failure(let error):
-                
                 self.delegate.postLoginFailure(error: error.localizedDescription)
+                print("Deu ruim!")
             }
         }
     }
