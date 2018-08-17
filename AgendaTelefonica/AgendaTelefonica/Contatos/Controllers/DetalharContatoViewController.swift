@@ -72,7 +72,7 @@ class DetalharContatoViewController: UIViewController {
         super.viewWillAppear(animated)
         
         self.contato = ContatosViewModel.get(id: id)
-        
+        self.title = self.contato.nome
         self.nameLabel.text = self.contato.nome
         self.telefoneLabel.text = self.contato.telefone
         self.emailLabel.text = self.contato.email
@@ -91,8 +91,6 @@ class DetalharContatoViewController: UIViewController {
 //func didReceiveMemoryWarning() {
 //        super.didReceiveMemoryWarning()
 //    }
-
-
 //@IBAction func abrirCriar(_ sender: Any) {
 //    self.perform(segue: StoryboardSegue.Contatos.segueCriar)
 //}
@@ -100,14 +98,7 @@ class DetalharContatoViewController: UIViewController {
 extension DetalharContatoViewController: ContatoServiceDelegate {
     func getContatosSuccess() {
         
-        let alert = UIAlertController(title: "Contato Excluido", message: "O contato \(self.nameLabel.text!) foi excluído com sucesso", preferredStyle: UIAlertControllerStyle.alert)
-        let action = UIAlertAction.init(title: "Ok!", style: UIAlertActionStyle.default) { (_) in
-            
-            self.delegate.atualizar()
-            self.navigationController?.popViewController(animated: true)
-        }
-        alert.addAction(action)
-        self.present(alert, animated: true, completion: nil)
+        
     }
     
     func getContatosFailure(error: String) {
@@ -139,7 +130,14 @@ extension DetalharContatoViewController: ContatoServiceDelegate {
     }
     
     func delContatosSuccess() {
-        print("APAGUEI")
+        let alert = UIAlertController(title: "Contato Excluido", message: "O contato \(self.nameLabel.text!) foi excluído com sucesso", preferredStyle: UIAlertControllerStyle.alert)
+        let action = UIAlertAction.init(title: "Ok!", style: UIAlertActionStyle.default) { (_) in
+            
+            self.delegate.atualizar()
+            self.navigationController?.popViewController(animated: true)
+        }
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
     }
     
     func postContatosFailure(error: String) {

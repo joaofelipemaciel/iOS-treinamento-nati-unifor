@@ -54,6 +54,8 @@ enum StoryboardScene {
     static let storyboardName = "Contatos"
 
     static let initialScene = InitialSceneType<UINavigationController>(storyboard: Contatos.self)
+
+    static let contatosViewController = SceneType<AgendaTelefonica.ContatosViewController>(storyboard: Contatos.self, identifier: "ContatosViewController")
   }
   enum LaunchScreen: StoryboardType {
     static let storyboardName = "Launch Screen"
@@ -74,6 +76,7 @@ enum StoryboardSegue {
     case segueEditar
   }
   enum Main: String, SegueType {
+    case segueCadastrar
     case segueEntrar
   }
 }

@@ -1,10 +1,22 @@
 "app.title" = "Agenda";
 
 "login.cadastrar" = "Cadastrar";
-"login.entrar" = "Login";
+"login.entrar" = "Entrar";
 "login.email" = "Email";
 "login.senha" = "Senha";
+"login.cadastrar.email" = "E-Mail";
+"login.cadastrar.senha" = "Senha";
+"login.cadastrar.confirmarsenha" = "Confirmar Senha";
 
 "contatos.title" = "Contatos";
+"contatos.novocontato" = "Novo Contato";
+"contatos.nome" = "Nome";
+"contatos.email" = "Email";
+"contatos.telefone" = "Telefone";
+"contatos.urlimagem" = "URL Imagem";
+"contatos.criar" = "Criar";
+"contatos.confirmar" = "Confirmar Edicão";
+"contatos.ativaredicao" = "Edicão Desabilitada";
 "contatos.editar" = "Editar";
 "contatos.excluir" = "Excluir";
+"contatos.deslogar" = "Deslogar";

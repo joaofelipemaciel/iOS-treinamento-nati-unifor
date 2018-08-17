@@ -41,7 +41,6 @@ class ContatosViewModel {
         contatoView.telefone = contato.telefone ?? ""
         contatoView.avatar = contato.avatar ?? ""
 //        contatoView.aniversario = contato.aniversario!
-        
 //        if let aniversario = contato.aniversario {
 //            contatoView.aniversario = Date(timeIntervalSince1970: aniversario)
 //        }

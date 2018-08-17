@@ -50,12 +50,17 @@ class LoginViewController: UIViewController {
     }
     
     //MARK: - Actions
+    //Funcao destinada a realizar op login no aplicativo, com usuario criado no postman
     @IBAction func logar(_ sender: Any) {
     
         if let email = self.email.text, let senha = self.senha.text {
             
             self.service.postLogin(email: email, senha: senha)
-        } 
+        }
+    }
+    
+    @IBAction func cadastrarUsuario(_ sender: Any) {
+        self.perform(segue: StoryboardSegue.Main.segueCadastrar)
     }
 }
 

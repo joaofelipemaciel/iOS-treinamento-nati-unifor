@@ -19,7 +19,7 @@ class UserViewModel {
             uiRealm.add(usuario, update: true)
         }
     }
-    
+//Apagar no banco --> Usuário e Contatos.
     static func clear() {
         
         try! uiRealm.write {

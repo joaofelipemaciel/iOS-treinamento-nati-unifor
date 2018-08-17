@@ -12,9 +12,21 @@ import Alamofire
 class LoginRequestFactory{
     
     static func postLogin(email: String, senha: String) -> DataRequest {
-        let param: Parameters = ["email": email, "password": senha]
-        return Alamofire.request(baseUrl + "auth/sign_in", method: .post, parameters: param, encoding: JSONEncoding.default)
+        
+        let params: Parameters = ["email": email, "password": senha]
+        
+        return Alamofire.request(baseUrl + "auth/sign_in", method: .post, parameters: params, encoding: JSONEncoding.default)
     }
     
-//    static func post (COMO CRIAR USUÁRIO - COMPLETAR )
+    static func delLogout() -> DataRequest {
+        return Alamofire.request(baseUrl + "auth/sign_out", method: .delete, headers: header)
+    }
+    
+    static func postUser(email: String, password: String, passwordConfirmation: String) -> DataRequest {
+        
+        let params: Parameters = ["email": email, "password": password, "password_confirmation": passwordConfirmation]
+        
+        return Alamofire.request(baseUrl + "auth", method: .post, parameters: params, encoding: JSONEncoding.default)
+    }
+    
 }

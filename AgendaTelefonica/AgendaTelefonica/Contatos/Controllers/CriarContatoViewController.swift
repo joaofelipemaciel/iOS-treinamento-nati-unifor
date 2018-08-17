@@ -76,7 +76,8 @@ class CriarContatoViewController: UIViewController {
     func editarContato(){
         if let salvarNome = self.nomeContato.text, let salvarEmail = self.emailContato.text, let salvarTelefone = self.telefoneContato.text, let salvarImagem = self.imagemContato.text{
         
-        self.service.putContato(id: self.id,nomeContato: salvarNome, aniversarioContato: 315, emailContato: salvarEmail, telefoneContato: salvarTelefone, imagemContato: salvarImagem)
+            self.service.putContato(id: self.id,nomeContato: salvarNome, aniversarioContato: 315, emailContato: salvarEmail, telefoneContato: salvarTelefone, imagemContato: salvarImagem)
+
         }
     }
     
@@ -90,7 +91,6 @@ class CriarContatoViewController: UIViewController {
 extension CriarContatoViewController: ContatoServiceDelegate {
     func getContatosSuccess() {
         print("Contato Salvo")
-        self.returnToMainViewcontroller()
     }
     
     func postContatosSuccess() {

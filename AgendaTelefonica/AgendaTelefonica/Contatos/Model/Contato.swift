@@ -50,8 +50,6 @@ extension Contato {
         let todosContatos = self.all()
         var contatosOrdenados: [[Contato]] = []
         
-        //        var todasIniciais = todosContatos.map { (contato: Contato) -> String in
-        //            return String(describing: contato.nome.characters.first)
         let todasIniciais = todosContatos.map({String(describing: $0.nome?.characters.first)})
         var iniciais: [String] = []
         for inicial in todasIniciais {

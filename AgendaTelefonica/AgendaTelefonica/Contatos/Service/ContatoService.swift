@@ -24,6 +24,7 @@ protocol ContatoServiceDelegate {
 
 }
 
+//Explicar de novo o que significa
 extension ContatoServiceDelegate {
     
     func getContatosSuccess() {
@@ -59,7 +60,7 @@ class ContatoService {
     required init(delegate: ContatoServiceDelegate) {
         self.delegate = delegate
     }
-    
+
     func getContatos() {
         
         ContatoRequestFactory.getContatos().validate().responseArray { (response: DataResponse<[Contato]>) in

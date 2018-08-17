@@ -11,6 +11,7 @@ import Foundation
 
 var header: [String : String] = [:]
 
+//Classe destinada a realizar as "requisicoes", verificando se ha algum usuario logado.
 class SessionControl {
     
     static var isSessionActive: Bool {
@@ -25,9 +26,13 @@ class SessionControl {
         
         header = [:]
         
+        //refere-se a um IF de forma inversa, caso for nulo, ele entra
         guard let headers = headers else {
             
+            //Se nao existir, após entrar na funcao, ele executará esse IF primeiro, ñ necessario passar parametro
             if let user = uiRealm.objects(User.self).first {
+                
+                header["Content-Type"] = "application/json"
                 
                 if let accessToken = user.accessToken {
                     header["Access-Token"] = accessToken

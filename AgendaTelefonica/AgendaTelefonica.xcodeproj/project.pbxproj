@@ -26,6 +26,7 @@
 		8392E25720FF746300FDB8E5 /* LoginRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392E25620FF746300FDB8E5 /* LoginRequestFactory.swift */; };
 		8392E25920FF747F00FDB8E5 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392E25820FF747F00FDB8E5 /* LoginService.swift */; };
 		8392E25C20FF782900FDB8E5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392E25B20FF782900FDB8E5 /* User.swift */; };
+		C31726222126011B00F1C58E /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31726212126011B00F1C58E /* CadastroViewController.swift */; };
 		C32AA127210F91E30070E9CE /* ContatoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32AA125210F91E30070E9CE /* ContatoTableViewCell.swift */; };
 		C32AA128210F91E30070E9CE /* ContatoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32AA126210F91E30070E9CE /* ContatoTableViewCell.xib */; };
 		C36011AB2110D1EF00C593AB /* CriarContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36011AA2110D1EF00C593AB /* CriarContatoViewController.swift */; };
@@ -77,6 +78,7 @@
 		8392E25B20FF782900FDB8E5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A46378D08CCE290E93AF458F /* Pods-AgendaTelefonica.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgendaTelefonica.release.xcconfig"; path = "Pods/Target Support Files/Pods-AgendaTelefonica/Pods-AgendaTelefonica.release.xcconfig"; sourceTree = "<group>"; };
 		B597981F389274E764BE0143 /* Pods_AgendaTelefonica.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AgendaTelefonica.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C31726212126011B00F1C58E /* CadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
 		C32AA125210F91E30070E9CE /* ContatoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoTableViewCell.swift; sourceTree = "<group>"; };
 		C32AA126210F91E30070E9CE /* ContatoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContatoTableViewCell.xib; sourceTree = "<group>"; };
 		C36011AA2110D1EF00C593AB /* CriarContatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriarContatoViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				C3BCE4FF20FE6EC50099B709 /* LoginViewController.swift */,
+				C31726212126011B00F1C58E /* CadastroViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				8392E25220FF6EA800FDB8E5 /* Storyboard.swift in Sources */,
 				8392E25320FF6EA800FDB8E5 /* Colors.swift in Sources */,
 				8392E25720FF746300FDB8E5 /* LoginRequestFactory.swift in Sources */,
+				C31726222126011B00F1C58E /* CadastroViewController.swift in Sources */,
 				831B58142100B78200620585 /* UserViewModel.swift in Sources */,
 				C36011AB2110D1EF00C593AB /* CriarContatoViewController.swift in Sources */,
 				C3BCE50020FE6EC50099B709 /* LoginViewController.swift in Sources */,
@@ -712,7 +716,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 25W2WLFT5U;
 				INFOPLIST_FILE = "$(SRCROOT)/AgendaTelefonicaTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.Nati.AgendaTelefonica;
@@ -730,7 +734,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 25W2WLFT5U;
 				INFOPLIST_FILE = "$(SRCROOT)/AgendaTelefonicaTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.Nati.AgendaTelefonica;

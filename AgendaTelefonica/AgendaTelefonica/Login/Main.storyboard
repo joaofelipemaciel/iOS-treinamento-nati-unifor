@@ -42,12 +42,15 @@
                                 <state key="normal" title="Entrar"/>
                                 <connections>
                                     <action selector="logar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xa2-hp-BTg"/>
-                                    <segue destination="Hvl-eZ-Ibe" kind="show" identifier="segueEntrar" id="FFW-4P-c11"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bb0-PE-IOt">
                                 <rect key="frame" x="16" y="495" width="343" height="30"/>
                                 <state key="normal" title="Cadastrar"/>
+                                <connections>
+                                    <action selector="cadastrarUsuario:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E5y-0o-kM9"/>
+                                    <segue destination="Rk3-iX-oiS" kind="show" identifier="segueCadastrar" id="X9w-yS-Zzv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -79,6 +82,7 @@
                         <outlet property="email" destination="nuE-YQ-cFh" id="Cfy-Hz-YSs"/>
                         <outlet property="entrarButton" destination="DQt-hp-cYf" id="jHC-XT-1BM"/>
                         <outlet property="senha" destination="Isf-iU-oWB" id="ijt-ER-ugW"/>
+                        <segue destination="Hvl-eZ-Ibe" kind="presentation" identifier="segueEntrar" id="h1G-YH-aDR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -90,7 +94,123 @@
                 <viewControllerPlaceholder storyboardName="Contatos" id="Hvl-eZ-Ibe" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="edg-uy-AYm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1114" y="97"/>
+            <point key="canvasLocation" x="1472" y="-124"/>
+        </scene>
+        <!--Cadastro View Controller-->
+        <scene sceneID="d7b-lf-61g">
+            <objects>
+                <viewController id="Rk3-iX-oiS" customClass="CadastroViewController" customModule="AgendaTelefonica" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gih-Oy-W7U">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insira seu e-mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Us4-fh-MqO">
+                                <rect key="frame" x="16" y="134" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex.: jose@seuemail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cf7-UC-AdN">
+                                <rect key="frame" x="16" y="163" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insira uma senha:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7pk-Xx-Tec">
+                                <rect key="frame" x="16" y="249" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insira uma senha forte." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XvX-xt-QOg">
+                                <rect key="frame" x="16" y="278" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirme a senha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IgJ-xn-ofx">
+                                <rect key="frame" x="16" y="354" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirme sua senha." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U8o-O4-8d4">
+                                <rect key="frame" x="16" y="383" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="si4-RF-cu8">
+                                <rect key="frame" x="16" y="462" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.29215494791666669" green="0.85695863436111119" blue="0.049045138888888888" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="Confirmar">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BLr-ZQ-32r">
+                                <rect key="frame" x="16" y="536" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="Cancelar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Us4-fh-MqO" firstAttribute="leading" secondItem="7pk-Xx-Tec" secondAttribute="leading" id="0Zq-1W-nH5"/>
+                            <constraint firstItem="6Rt-nh-ehy" firstAttribute="trailing" secondItem="7pk-Xx-Tec" secondAttribute="trailing" constant="16" id="5wJ-JE-toB"/>
+                            <constraint firstItem="6Rt-nh-ehy" firstAttribute="bottom" secondItem="BLr-ZQ-32r" secondAttribute="bottom" constant="101" id="705-en-hqN"/>
+                            <constraint firstItem="7pk-Xx-Tec" firstAttribute="centerX" secondItem="Gih-Oy-W7U" secondAttribute="centerX" id="7P8-dq-dOo"/>
+                            <constraint firstItem="6Rt-nh-ehy" firstAttribute="trailing" secondItem="BLr-ZQ-32r" secondAttribute="trailing" constant="16" id="8cd-pW-kyT"/>
+                            <constraint firstItem="6Rt-nh-ehy" firstAttribute="trailing" secondItem="XvX-xt-QOg" secondAttribute="trailing" constant="16" id="BER-cf-ZIz"/>
+                            <constraint firstItem="U8o-O4-8d4" firstAttribute="top" secondItem="IgJ-xn-ofx" secondAttribute="bottom" constant="8" id="FDh-Hj-kh8"/>
+                            <constraint firstItem="Us4-fh-MqO" firstAttribute="leading" secondItem="6Rt-nh-ehy" secondAttribute="leading" constant="16" id="Fqt-Vv-w4v"/>
+                            <constraint firstItem="si4-RF-cu8" firstAttribute="leading" secondItem="6Rt-nh-ehy" secondAttribute="leading" constant="16" id="J0b-Ow-Bgj"/>
+                            <constraint firstItem="BLr-ZQ-32r" firstAttribute="centerX" secondItem="Gih-Oy-W7U" secondAttribute="centerX" id="J9e-Pt-Nh4"/>
+                            <constraint firstItem="cf7-UC-AdN" firstAttribute="leading" secondItem="6Rt-nh-ehy" secondAttribute="leading" constant="16" id="JZy-3F-A4N"/>
+                            <constraint firstItem="Us4-fh-MqO" firstAttribute="centerX" secondItem="Gih-Oy-W7U" secondAttribute="centerX" id="Jt7-bi-xZE"/>
+                            <constraint firstItem="XvX-xt-QOg" firstAttribute="top" secondItem="7pk-Xx-Tec" secondAttribute="bottom" constant="8" id="LbS-XZ-7Rp"/>
+                            <constraint firstItem="BLr-ZQ-32r" firstAttribute="leading" secondItem="6Rt-nh-ehy" secondAttribute="leading" constant="16" id="Pdf-hn-ST3"/>
+                            <constraint firstItem="U8o-O4-8d4" firstAttribute="leading" secondItem="6Rt-nh-ehy" secondAttribute="leading" constant="16" id="Pl1-kc-ERy"/>
+                            <constraint firstItem="si4-RF-cu8" firstAttribute="centerX" secondItem="Gih-Oy-W7U" secondAttribute="centerX" id="VAX-Zm-XOm"/>
+                            <constraint firstItem="7pk-Xx-Tec" firstAttribute="top" secondItem="cf7-UC-AdN" secondAttribute="bottom" constant="56" id="YQS-ND-7LK"/>
+                            <constraint firstItem="XvX-xt-QOg" firstAttribute="centerX" secondItem="Gih-Oy-W7U" secondAttribute="centerX" id="a9h-o9-6gJ"/>
+                            <constraint firstItem="IgJ-xn-ofx" firstAttribute="centerX" secondItem="Gih-Oy-W7U" secondAttribute="centerX" id="c4b-nR-Ej5"/>
+                            <constraint firstItem="6Rt-nh-ehy" firstAttribute="trailing" secondItem="U8o-O4-8d4" secondAttribute="trailing" constant="16" id="eWb-oG-nvu"/>
+                            <constraint firstItem="IgJ-xn-ofx" firstAttribute="top" secondItem="XvX-xt-QOg" secondAttribute="bottom" constant="46" id="hoP-N3-WoX"/>
+                            <constraint firstItem="cf7-UC-AdN" firstAttribute="centerX" secondItem="Gih-Oy-W7U" secondAttribute="centerX" id="iHp-1x-y6K"/>
+                            <constraint firstItem="XvX-xt-QOg" firstAttribute="leading" secondItem="6Rt-nh-ehy" secondAttribute="leading" constant="16" id="ixX-8F-DKw"/>
+                            <constraint firstItem="Us4-fh-MqO" firstAttribute="top" secondItem="6Rt-nh-ehy" secondAttribute="top" constant="114" id="kvR-Pp-06C"/>
+                            <constraint firstItem="cf7-UC-AdN" firstAttribute="top" secondItem="Us4-fh-MqO" secondAttribute="bottom" constant="8" id="m1Q-BR-4vw"/>
+                            <constraint firstItem="XvX-xt-QOg" firstAttribute="top" secondItem="7pk-Xx-Tec" secondAttribute="bottom" constant="8" id="pQy-t5-AwX"/>
+                            <constraint firstItem="6Rt-nh-ehy" firstAttribute="trailing" secondItem="si4-RF-cu8" secondAttribute="trailing" constant="16" id="qvJ-MK-Zyt"/>
+                            <constraint firstItem="6Rt-nh-ehy" firstAttribute="trailing" secondItem="Us4-fh-MqO" secondAttribute="trailing" constant="16" id="sck-XR-4FV"/>
+                            <constraint firstItem="6Rt-nh-ehy" firstAttribute="trailing" secondItem="cf7-UC-AdN" secondAttribute="trailing" constant="16" id="tmt-Ac-3N5"/>
+                            <constraint firstItem="7pk-Xx-Tec" firstAttribute="leading" secondItem="6Rt-nh-ehy" secondAttribute="leading" constant="16" id="tt7-Hx-DRC"/>
+                            <constraint firstItem="U8o-O4-8d4" firstAttribute="top" secondItem="IgJ-xn-ofx" secondAttribute="bottom" constant="8" id="uS2-NM-PDE"/>
+                            <constraint firstItem="U8o-O4-8d4" firstAttribute="centerX" secondItem="Gih-Oy-W7U" secondAttribute="centerX" id="wKd-Cg-Le1"/>
+                            <constraint firstItem="6Rt-nh-ehy" firstAttribute="trailing" secondItem="IgJ-xn-ofx" secondAttribute="trailing" constant="16" id="wpf-qX-HCz"/>
+                            <constraint firstItem="IgJ-xn-ofx" firstAttribute="leading" secondItem="6Rt-nh-ehy" secondAttribute="leading" constant="16" id="xgn-F9-UC9"/>
+                            <constraint firstItem="cf7-UC-AdN" firstAttribute="top" secondItem="Us4-fh-MqO" secondAttribute="bottom" constant="8" id="xjs-hQ-o2l"/>
+                            <constraint firstItem="BLr-ZQ-32r" firstAttribute="top" secondItem="si4-RF-cu8" secondAttribute="bottom" constant="44" id="ydW-BA-KJY"/>
+                            <constraint firstItem="Us4-fh-MqO" firstAttribute="leading" secondItem="IgJ-xn-ofx" secondAttribute="leading" id="yr3-UL-7gf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Rt-nh-ehy"/>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="BLr-ZQ-32r" id="SEr-Xl-hSJ"/>
+                        <outlet property="confirmButton" destination="si4-RF-cu8" id="nkv-yU-tKG"/>
+                        <outlet property="confirmaSenhaCadastro" destination="U8o-O4-8d4" id="ISa-9D-7Ip"/>
+                        <outlet property="nomeCadastro" destination="cf7-UC-AdN" id="61u-Df-FFZ"/>
+                        <outlet property="senhaCadastro" destination="XvX-xt-QOg" id="PIj-GC-5Di"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i9M-2X-SaL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1553" y="374"/>
         </scene>
     </scenes>
     <resources>
